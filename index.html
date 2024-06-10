@@ -10,7 +10,6 @@
         <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     </head>
     <body>
-        
         <div id="root"></div>
         <script type="text/babel">
         const Home = () => (
@@ -24,7 +23,6 @@
             <div className="container">
                 <h2>About Page</h2>
                 <p>This is the About Page.</p>
-                <img src="img/welcome.jpg"/>
             </div>
         );
 
@@ -34,8 +32,6 @@
                 <p>This is some random text for Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula elit vel erat dictum, id tincidunt lectus suscipit. Quisque in neque sit amet tortor fermentum aliquam. Morbi vehicula libero non leo volutpat, a pharetra magna dictum.</p>
             </div>
         );
-        
-        
 
         const Navbar = ({ setPage }) => (
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -59,15 +55,26 @@
             </nav>
         );
 
+        const Footer = () => (
+            <footer className="footer mt-auto py-3 bg-light">
+                <div className="container">
+                    <span className="text-muted">© 2024 Your Company. All rights reserved.</span>
+                </div>
+            </footer>
+        );
+
         const App = () => {
             const [page, setPage] = React.useState('home');
 
             return (
-                <div>
+                <div className="d-flex flex-column min-vh-100">
                     <Navbar setPage={setPage} />
-                    {page === 'home' && <Home />}
-                    {page === 'about' && <About />}
-                    {page === 'project1' && <Project1 />}
+                    <main className="flex-grow-1">
+                        {page === 'home' && <Home />}
+                        {page === 'about' && <About />}
+                        {page === 'project1' && <Project1 />}
+                    </main>
+                    <Footer />
                 </div>
             );
         };
