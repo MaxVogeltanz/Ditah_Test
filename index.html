@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>React CDN Example with Bootstrap</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        
+        <div id="root"></div>
+        <script type="text/babel">
+        const Home = () => (
+            <div className="container">
+                <h2>Home Page</h2>
+                <p>Welcome to the Home Page!</p>
+            </div>
+        );
+
+        const About = () => (
+            <div className="container">
+                <h2>About Page</h2>
+                <p>This is the About Page.</p>
+                <img src="img/welcome.jpg"/>
+            </div>
+        );
+
+        const Project1 = () => (
+            <div className="container">
+                <h2>Project 1</h2>
+                <p>This is some random text for Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula elit vel erat dictum, id tincidunt lectus suscipit. Quisque in neque sit amet tortor fermentum aliquam. Morbi vehicula libero non leo volutpat, a pharetra magna dictum.</p>
+            </div>
+        );
+        
+        
+
+        const Navbar = ({ setPage }) => (
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <a className="navbar-brand" href="#">Navbar</a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <a className="nav-link" href="#" onClick={() => setPage('home')}>Home</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#" onClick={() => setPage('about')}>About</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#" onClick={() => setPage('project1')}>Project 1</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        );
+
+        const App = () => {
+            const [page, setPage] = React.useState('home');
+
+            return (
+                <div>
+                    <Navbar setPage={setPage} />
+                    {page === 'home' && <Home />}
+                    {page === 'about' && <About />}
+                    {page === 'project1' && <Project1 />}
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+    </body>
+</html>
