@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>DiTAH</title>
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+<!--    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">-->
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet">
+    <link href="vendors/prism/prism.css" rel="stylesheet">
+    <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="assets/css/user.css" rel="stylesheet" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .graph-containerng {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(#004567, #ffffff);
+            background-position: center;
+            background-size:cover;
+          /*  background-color: #f0f8ff;  Very light blue background color */
+        }
+        .containerng {
+        width: 150%;
+            height: 200%;
+          /*    background-position: center;
+            background-size:cover;*/
+            /*border: 1px solid #ddd;*/
+            position: relative;
+            overflow: hidden; /* Ensure anything outside the container is hidden */
+        }
+        .nodeng {
+            stroke: #fff;
+            stroke-width: 1.5px;
+        }
+        .linkng {
+            stroke: #999;
+            stroke-opacity: 0.6;
+        }
+        .tooltipng {
+            position: absolute;
+            padding: 5px;
+            background: white;
+            border: 1px solid #ccc;
+            pointer-events: none;
+            opacity: 0;
+        }
+        </style>
+  </head>
+  <body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <!--  <div class="cursor-outer d-none d-md-block"></div>-->
+      <nav class="navbar navbar-light py-3 px-0 overflow-hidden">
+        <div class="container px-md-5">
+          <div class="row w-100 g-0 justify-content-between">
+            <div class="col-8">
+              <div class="d-inline-block">
+                <a class="navbar-brand pt-0 fs-3 text-black d-flex align-items-center"
+                  href="index.html">
+                  <img style="max-width: 30%; height: auto;" src="assets/img/home/logo.png" alt=""
+                   />
+                </a>
+              </div>
+            </div>
+            <div class="col-4 d-lg-none text-end pe-0">
+              <button class="btn p-0 shadow-none text-black fs-2 d-inline-block"
+                data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas"
+                aria-controls="navbarOffcanvas" aria-expanded="false"
+                aria-label="Toggle offcanvas navigation">
+                <span class="menu-bar"></span>
+              </button>
+            </div>
+            <div class="offcanvas offcanvas-end px-0" id="navbarOffcanvas"
+              aria-labelledby="navbarOffcanvasTitle" aria-hidden="true">
+              <div class="offcanvas-header justify-content-end">
+                <h5 class="visually-hidden offcanvas-title" id="navbarOffcanvasTitle">Menu</h5>
+                <button class="btn p-0 shadow-none text-black fs-2 d-inline text-end" type="button"
+                  data-bs-dismiss="offcanvas" aria-label="Close">
+                  <span class="menu-close-bar"></span>
+                </button>
+              </div>
+              <div class="offcanvas-body px-0">
+                <div class="d-lg-flex flex-center-start gap-3 overflow-hidden">
+                  <ul class="navbar-nav ms-auto fs-4 ps-6">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5 active"
+                        aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
+                        aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
+                        aria-current="page" href="portfolio.html">Partner</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
+                        aria-current="page" href="gallery.html">Infrastruktur</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
+                        aria-current="page" href="gallery.html">Tools & Methoden</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
+                        aria-current="page" href="gallery.html">Wissenstransfer</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"
+                        aria-current="page" href="exhibitions.html">Ressourcen</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="d-none d-lg-flex justify-content-end position-relative z-index-1">
+                <div class="position-absolute absolute-centered z-index--1">
+                  <h1
+                    class="ms-2 fw-bolder text-outlined text-uppercase text-white pe-none display-1"
+                    >Home</h1>
+                </div>
+                <div class="d-flex gap-3 align-items-start">
+                  <ul class="navbar-nav navbar-fotogency ms-auto text-end">
+                    <li class="nav-item px-2 position-relative">
+                      <a class="nav-link pt-0 active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item px-2 position-relative">
+                      <a class="nav-link pt-0" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item px-2 position-relative">
+                      <a class="nav-link pt-0" aria-current="page" href="portfolio.html">Partner</a>
+                    </li>
+                    <li class="nav-item px-2 position-relative">
+                      <a class="nav-link pt-0" aria-current="page" href="gallery.html"
+                        >Infrastruktur</a>
+                    </li>
+                    <li class="nav-item px-2 position-relative">
+                      <a class="nav-link pt-0" aria-current="page" href="gallery.html">Tools &
+                        Methoden</a>
+                    </li>
+                    <li class="nav-item px-2 position-relative">
+                      <a class="nav-link pt-0" aria-current="page" href="gallery.html"
+                        >Wissenstransfer</a>
+                    </li>
+                    <li class="nav-item px-2 position-relative">
+                      <a class="nav-link pt-0" aria-current="page" href="exhibitions.html"
+                        >Ressourcen</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-4 pt-md-0 pb-8 pb-sm-11 mt-lg-n8">
+        <div class="graph-containerng">
+          <div>
+           
+            <div class="containerng">
+              <svg width="100%" height="100%">
+                <defs>
+                  <clipPath id="clip">
+                    <rect width="100%" height="100%"></rect>
+                  </clipPath>
+                </defs>
+                <g id="graph" clip-path="url(#clip)"></g>
+              </svg>
+            </div>
+            <div class="tooltipng" id="tooltip"></div>
+          </div>
+        </div>
+        <div class="container px-md-5" style="height: 100%;">
+          <!---->
+          <div class="row">
+            <div class="col-md-9 col-lg-7">
+              <h1 class="pt-4 fs-4 fs-md-6 fs-xl-7 mb-4 mb-lg-0 position-relative z-index-2"
+                style="color: #004567;">
+                <!---->Digitale Transformation der Österreichischen Geisteswissenschaften </h1>
+            </div>
+          </div>
+        </div>
+        <div class="pt-4 row mt-md-n6">
+          <div class="col-2 d-none d-lg-block mt-6">
+          <!--  <img src="assets/img/partner/BMBWF_Logo_srgb_klein.png" alt="BMBWF" width="250" />-->
+          </div>
+          <!--class="img-fluid"-->
+          <div class="col-1 mt-10 d-none d-lg-block">
+            <a class="scroll-indicator text-warning" href="#footer">
+              <span>SCROLL </span>
+              <img src="assets/img/icons/longarrow.png" alt="" />
+            </a>
+          </div>
+          <div class="col-lg-7 position-relative">
+            <div class="position-absolute top-0 end-0 ">
+              <img src="assets/img/home/DitahNeu1.png" alt="" width="250" />
+              <!-- overflow-hidden overflow-md-visible-->
+              <!--  <div class="img-circle p-5 p-md-7 rounded-circle"></div>
+                <div class="img-circle-2 p-5 p-md-7 rounded-circle"></div> class="img-fluid"-->
+            </div>
+            <div class="col-11 mt-7 d-none d-md-block bottom-n100">
+              <div class="d-none d-lg-block mt-4 mb-4 pb-4">
+                <img src="assets/img/partner/BMBWF_Logo_srgb_klein.png" alt="BMBWF" width="250" />
+              </div>
+              <p class="fs-2 lh-1 text-400">Ein Projekt zu Vermittlung und Ausbau digitaler
+                Kompetenzen, Methoden und Infrastrukturen in geisteswissenschaftlicher Forschung und
+                Lehre - gefördert vom Bundesministerium für Bildung, Wissenschaft und Forschung </p>
+              <p class="text-300">Ziel dieses Projektes ist es, die in den Digital Humanities
+                entwickelten Methoden und Ansätze so zu etablieren und aufzubereiten, dass sie in
+                den alltäglichen Gebrauch geisteswissenschaftlicher Forschung und Nachwuchsbildung
+                übergehen können. Zu diesem Zweck werden gemeinsam entwickelte Lösungen in drei
+                großen Themenbereichen geschaffen: Integration der digitalen Infrastruktur,
+                Aufbereitung und niederschwelliger Zugang zu digitalen Methoden und Tools sowie die
+                Vermittlung digitaler Kompetenzen in Wissenschaft und Lehre. Das durchführende
+                Konsortium setzt sich dabei aus Mitgliedern führender österreichischer DH-Standorten
+                zusammen.</p>
+              <p class="text-300">Die drei Säulen des Projektes und ihre Aufgabengebiete im
+                Überblick:</p>
+              <ul class="text-300">
+                <li>
+                  <strong>Infrastruktur</strong>
+                  <ul>
+                    <li>Gemeinsamen Forschungsdateninfrastruktur für die digitalen
+                      Geisteswissenschaften</li>
+                    <li>Erfassungs- und Beschreibungsumgebung für Bild- und Textobjekte</li>
+                    <li>Archvierungslösungen für geisteswissenschaftliche Forschungsdaten unter
+                      besonderer Berückdsichtigung von Bilddaten</li>
+                    <li>European Open Science Cloud / SSHOC</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Methoden und Tools zur Analyse von Forschungsdaten</strong>
+                  <ul>
+                    <li>Abgleich digitaler und traditioneller geisteswissenschaftlicher
+                      Methoden</li>
+                    <li>Annotation</li>
+                    <li>Kuratierung und Erschließung</li>
+                    <li>Computer Vision, Artificial Intelligence</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Wissenstransfer</strong>
+                  <ul>
+                    <li>Didaktische Aufbereitung</li>
+                    <li>Tutorien zu Infrastruktur, Methoden und Tools</li>
+                    <li>Lösungen für die Präsentation von Forschungsdaten</li>
+                    <li>Information Retrieval</li>
+                    <li>Experimenteller Zugang zu wissenschaftlichen Daten</li>
+                    <li>Wissenschaftskommunikation in den Geisteswissenschaften</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="position-absolute start-0 bottom-0 d-lg-none">
+              <a class="scroll-indicator text-warning" href="#footer">
+                <span>SCROLL </span>
+                <img src="assets/img/icons/longarrow.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <!--            <div class="col-2 d-none d-lg-block mb-auto"><img class="img-fluid" src="assets/img/home/DitahNeu2.png" alt=""  width="250"/></div>
+          </div>-->
+        </div>
+        <!-- end of .container-->
+        
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+    <footer class="bg-footer-black" id="footer">
+      <div class="container py-6 px-md-5">
+        <div class="row g-0">
+          <div class="col-md-6 mb-5 mb-md-0">
+            <div class="mb-4 d-inline-block">
+              <a class="navbar-brand pt-0 fs-3 text-white d-flex align-items-center"
+                href="index.html">
+                <img src="assets/img/home/ditah_logo_transp_white.png" alt="" width="250" />
+              </a>
+            </div>
+            <div class="col-12 col-md-10 text-300 mb-3"><i class="fas fa-map-marker-alt"></i>
+              Universität Graz - Institut für Digitale Geisteswissenschaften</div>
+            <div class="col-12 col-md-10 text-300 mb-3">
+              <i class="fas fa-envelope"></i>
+              <a class="nav-link text-300 d-inline" href="mailto:scrscrumbledegg@gmail.com"
+                >ditah@uni-graz.at</a>
+            </div>
+          </div>
+          <div class="col-md-6"> logos </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="bg-black py-0">
+      <div class="container px-md-5">
+        <div class="row g-0 justify-content-md-between justify-content-evenly py-4">
+          <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
+            <p class="fs--1 my-2 fw-light text-100">All rights Reserved &copy; Universität Graz -
+              DDH, 2024</p>
+          </div>
+          <div class="col-12 col-sm-8 col-md-6">
+            <p class="fs--1 fw-light my-2 text-center text-md-end text-100"> Made with&nbsp; <svg
+                class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12"
+                height="12" fill="#F95C19" viewBox="0 0 16 16">
+                <path
+                  d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"
+                />
+              </svg>&nbsp;by&nbsp;<a class="fw-bold text-warning" href="https://themewagon.com/"
+                target="_blank">ThemeWagon</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end of .container-->
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script>
+        const nodes = [
+            { id: "home.html", name: "Home", color: "#004567" },
+            { id: "projektsubpagetemplate2.html", name: "Methoden&Tools", color: "#672200" },
+            { id: "gallery.html", name: "M3R", color: "#006756" },
+            { id: "projektsubpagetemplate.html", name: "Projekttemplate", color: "#001267" }
+        ];
+
+        const links = [
+            { source: "home.html", target: "gallery.html" },
+            { source: "gallery.html", target: "projektsubpagetemplate.html" },
+             { source: "projektsubpagetemplate.html", target: "projektsubpagetemplate2.html" },
+            { source: "gallery.html", target: "projektsubpagetemplate2.html" },
+             { source: "home.html", target: "projektsubpagetemplate2.html" }
+        ];
+
+        const container = d3.select('.containerng');
+        const width = container.node().offsetWidth;
+        const height = container.node().offsetHeight;
+
+        const svg = d3.select("svg")
+            .attr("viewBox", `0 0 ${width} ${height}`)
+            .attr("preserveAspectRatio", "xMidYMid meet");
+
+        const graph = svg.select("#graph");
+
+        const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+        // Calculate radius based on text width
+        function calculateRadius() {
+            const tempText = svg.append("text")
+                .attr("class", "temp-textng")
+                .style("font", "12px sans-serif")
+                .style("visibility", "hidden");
+
+            nodes.forEach(node => {
+                tempText.text(node.name);
+                const bbox = tempText.node().getBBox();
+                node.radius = bbox.width / 2 + 10;  // Add some padding
+            });
+
+            tempText.remove();
+        }
+
+        calculateRadius();
+
+        const linkDistance = d => d.source.radius + d.target.radius + 20;
+
+        const simulation = d3.forceSimulation(nodes)
+            .force("link", d3.forceLink(links).id(d => d.id).distance(linkDistance))
+            .force("charge", d3.forceManyBody().strength(-1000))
+            .force("center", d3.forceCenter(width / 2, height / 2))
+            .force("collide", d3.forceCollide().radius(d => d.radius + 5));
+
+        const tooltip = d3.select("#tooltip");
+
+        function createLinks() {
+            graph.append("g")
+                .attr("class", "linksng")
+                .selectAll("line")
+                .data(links)
+                .enter().append("line")
+                .attr("class", "linkng");
+        }
+
+        function createNodes() {
+            const nodeGroup = graph.append("g")
+                .attr("class", "nodesng")
+                .selectAll("g")
+                .data(nodes)
+                .enter().append("g")
+                .attr("class", "nodeng")
+                .on("click", (event, d) => {
+                    window.open(d.id, '_blank');
+                })
+                .on("mouseover", (event, d) => {
+                    tooltip.style("opacity", 1)
+                        .html(d.name)
+                        .style("left", `${event.pageX + 5}px`)
+                        .style("top", `${event.pageY + 5}px`);
+                })
+                .on("mousemove", (event, d) => {
+                    tooltip.style("left", `${event.pageX + 5}px`)
+                        .style("top", `${event.pageY + 5}px`);
+                })
+                .on("mouseout", () => {
+                    tooltip.style("opacity", 0);
+                })
+                .call(d3.drag()
+                    .on("start", dragstarted)
+                    .on("drag", dragged)
+                    .on("end", dragended));
+
+            nodeGroup.append("circle")
+                .attr("r", d => d.radius)
+                .attr("fill", d => d.color); // Use the color property
+
+            nodeGroup.append("text")
+                .attr("dy", 3)
+                .attr("text-anchor", "middle")
+                .text(d => d.name);
+        }
+
+        function ticked() {
+            graph.selectAll(".linkng")
+                .attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.x)
+                .attr("y2", d => d.target.y);
+
+            graph.selectAll(".nodeng")
+                .attr("transform", d => {
+                    // Keep nodes within the container bounds
+                    d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
+                    d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
+                    return `translate(${d.x},${d.y})`;
+                });
+        }
+
+        function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+
+        function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+
+        function applyZoomAndPan() {
+            const zoom = d3.zoom()
+                .scaleExtent([0.5, 3])
+                .on('zoom', (event) => {
+                    graph.attr('transform', event.transform);
+                });
+
+            svg.call(zoom);
+        }
+
+        createLinks();
+        createNodes();
+        simulation.nodes(nodes).on("tick", ticked);
+        simulation.force("link").links(links);
+        applyZoomAndPan();
+        </script>
+    <script src="vendors/popper/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/anchorjs/anchor.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="vendors/fontawesome/all.min.js"></script>
+    <script src="vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="vendors/prism/prism.js"></script>
+    <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+
+  </body>
+</html>
