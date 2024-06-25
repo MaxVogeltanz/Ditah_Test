@@ -1,22 +1,86 @@
 
         const nodes = [
-            { id: "öaw", name: "ÖAW", category: "Organisationen", color: "#ba2a11" },
-            { id: "TU Wien", name: "TU Wien", category: "Organisationen", color: "#ba2a11" },
-            { id: "Innsbruck", name: "Uni IBK", category: "Organisationen", color: "#ba2a11" },
-            { id: "Graz", name: "Uni Graz", category: "Organisationen", color: "#ba2a11" },
-            { id: "Salzburg", name: "PLUS Salzburg", category: "Organisationen", color: "#ba2a11" },
-            { id: "m3r.html", name: "M3R", category: "Methoden und Tools", year: 2023, color: "#009267" },
-            { id: "fercan.html", name: "FERCAN", category: "Projekte", year: 2020, color: "#001267" },
-            { id: "derla.html", name: "DERLA", category: "Projekte", year: 2020, color: "#001267" },
-            { id: "Ficker", name: "LFE", category: "Projekte", year: 2020, color: "#001267" },
+            { id: "Infra", name: "Infrastruktur", category: "Säule", color: "#004567" },
+            { id: "Methoden", name: "Methoden & Tools", category: "Säule", year: 2020, color: "#004567" },
+            { id: "Wissenstransfer", name: "Wissentransfer", category: "Säule", year: 2020, color: "#004567" },
+            
+            { id: "öaw", name: "ÖAW", category: "Organisationen", color: "#660000" },
+            { id: "TU Wien", name: "TU Wien", category: "Organisationen", color: "#660000" },
+            { id: "Innsbruck", name: "Uni Innsbruck", category: "Organisationen", color: "#660000" },
+            { id: "unigraz", name: "Uni Graz", category: "Organisationen", color: "#660000" },
+            { id: "plus", name: "PLUS", category: "Organisationen", color: "#660000" },
+            { id: "Cima", name: "CIMA", category: "Organisationen", color: "#660066" },
+            { id: "ABK", name: "ABK", category: "Organisationen", color: "#660000" },
+            { id: "Uni Krems", name: "UWK", category: "Organisationen", color: "#660000" },
+            { id: "Uni Wien", name: "Uni Wien", category: "Organisationen", color: "#660000" },
+            { id: "onb", name: "ÖNB", category: "Organisationen", color: "#660000" },
+            
+            { id: "gams", name: "GAMS", category: "Organisationen", color: "#666600" },
+            { id: "arche", name: "ARCHE", category: "Organisationen", color: "#666600" },
+            { id: "phaidra", name: "PHAIDRA", category: "Organisationen", color: "#666600" },
+            
+            { id: "fercan.html", name: "FERCAN", category: "Projekte", year: 2020, color: "#006600" },
+            { id: "derla.html", name: "DERLA", category: "Projekte", year: 2020, color: "#006600" },
+            { id: "ficker.html", name: "Ficker-Edition", category: "Projekte", year: 2020, color: "#006600" },
+            { id: "hps.html", name: "HPS", category: "Projekte", year: 2024, color: "#006600" },
+            { id: "gipse.html", name: "GIPSE", category: "Projekte", year: 2024, color: "#006600" },
+            { id: "digi.html", name: "DIGI 16", category: "Projekte", year: 2024, color: "#006600" },
+            { id: "m3r.html", name: "M3R", category: "Projekte", year: 2023, color: "#006600" },
+            { id: "patrimonium.html", name: "PATRIMONIUM", category: "Projekte", year: 2023, color: "#006600" },
+            { id: "onbkulturerbe.html", name: "Kulturerbe", category: "Projekte", year: 2023, color: "#006600" },
+            { id: "textvsvisual.html", name: "Text vs Visual", category: "Projekte", year: 2023, color: "#006600" },
+            { id: "holzmeister.html", name: "Holzmeister", category: "Projekte", year: 2023, color: "#006600" },
+            { id: "fotodb.html", name: "Fotodatenbank", category: "Projekte", year: 2023, color: "#006600" },
+            { id: "rnab.html", name: "RNAB", category: "Projekte", year: 2023, color: "#006600" },
 
         ];
 
         const links = [
+            { source: "Infra", target: "Methoden" },
+            { source: "Infra", target: "Wissenstransfer" },
+            { source: "Methoden", target: "Wissenstransfer" },
+            { source: "Methoden", target: "ficker.html" },
+            { source: "Methoden", target: "holzmeister.html" },
+            
+            { source: "Wissenstransfer", target: "plus" },
+            
+            { source: "Infra", target: "gams" },
+            { source: "Infra", target: "arche" },
+            { source: "Infra", target: "phaidra" },
+            { source: "gams", target: "unigraz" },
+            { source: "arche", target: "öaw" },
+            
+            { source: "unigraz", target: "derla.html" },
+            { source: "unigraz", target: "hps.html" },
+            { source: "unigraz", target: "gipse.html" },
+            { source: "unigraz", target: "fercan.html" },
+            { source: "unigraz", target: "digi.html" },
+            { source: "unigraz", target: "patrimonium.html" },
+            { source: "unigraz", target: "textvsvisual.html" },
+            { source: "Innsbruck", target: "ficker.html" },
+            { source: "Innsbruck", target: "holzmeister.html" },
+            { source: "Innsbruck", target: "fotodb.html" },
+            { source: "Innsbruck", target: "rnab.html" },
+            { source: "Uni Wien", target: "phaidra" },
+            { source: "Cima", target: "Uni Wien" },
+            { source: "Cima", target: "Uni Krems" },
+            { source: "Cima", target: "TU Wien" },
+            { source: "Cima", target: "ABK" },
+            { source: "Cima", target: "m3r.html" },
+            { source: "ABK", target: "m3r.html" },
+            { source: "onb", target: "onbkulturerbe.html" },
+            
+            { source: "Methoden", target: "m3r.html" },
+            { source: "Methoden", target: "patrimonium.html" },
+            { source: "Methoden", target: "fercan.html" },
+            { source: "Methoden", target: "derla.html" },
+            { source: "Wissenstransfer", target: "derla.html" },
             { source: "TU Wien", target: "m3r.html" },
-            { source: "Innsbruck", target: "Ficker" },
-            { source: "Graz", target: "fercan.html" },
-            { source: "Graz", target: "derla.html" },
+            { source: "Uni Krems", target: "m3r.html" },
+            
+            { source: "patrimonium.html", target: "fercan.html" },
+            { source: "m3r.html", target: "Uni Wien" },
+
         ];
 
         const container = d3.select('.containerng');
