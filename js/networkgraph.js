@@ -8,12 +8,13 @@
             { id: "TU Wien", name: "TU Wien", category: "Organisationen", color: "#660000" },
             { id: "Innsbruck", name: "Uni Innsbruck", category: "Organisationen", color: "#660000" },
             { id: "unigraz", name: "Uni Graz", category: "Organisationen", color: "#660000" },
-            { id: "plus", name: "PLUS", category: "Organisationen", color: "#660000" },
+            { id: "dhplus.html", name: "PLUS", category: "Organisationen", color: "#660000" },
             { id: "Cima", name: "CIMA", category: "Organisationen", color: "#660066" },
             { id: "ABK", name: "ABK", category: "Organisationen", color: "#660000" },
             { id: "Uni Krems", name: "UWK", category: "Organisationen", color: "#660000" },
             { id: "Uni Wien", name: "Uni Wien", category: "Organisationen", color: "#660000" },
             { id: "onb", name: "ÖNB", category: "Organisationen", color: "#660000" },
+            { id: "phaidra.html", name: "Phaidra", category: "Organisationen", color: "#660000" },
             
             { id: "gams", name: "GAMS", category: "Organisationen", color: "#666600" },
             { id: "arche", name: "ARCHE", category: "Organisationen", color: "#666600" },
@@ -30,21 +31,34 @@
             { id: "onbkulturerbe.html", name: "Kulturerbe", category: "Projekte", year: 2023, color: "#006600" },
             { id: "textvsvisual.html", name: "Text vs Visual", category: "Projekte", year: 2023, color: "#006600" },
             { id: "holzmeister.html", name: "Holzmeister", category: "Projekte", year: 2023, color: "#006600" },
-            { id: "fotodb.html", name: "Fotodatenbank", category: "Projekte", year: 2023, color: "#006600" },
+            { id: "fotodatenbank.html", name: "Fotodatenbank", category: "Projekte", year: 2023, color: "#006600" },
             { id: "rnab.html", name: "RNAB", category: "Projekte", year: 2023, color: "#006600" },
+            { id: "dhlehre.html", name: "DH Lehre", category: "Projekte", year: 2023, color: "#006600" },
+            { id: "habsburg.html", name: "Habsburg", category: "Projekte", year: 2023, color: "#006600" },
 
         ];
 
         const links = [
             { source: "Infra", target: "Methoden" },
             { source: "Infra", target: "Wissenstransfer" },
+            
+            { source: "Infra", target: "habsburg.html" },
+            { source: "Infra", target: "phaidra.html" },
+            
             { source: "Methoden", target: "Wissenstransfer" },
+            
             { source: "Methoden", target: "ficker.html" },
             { source: "Methoden", target: "holzmeister.html" },
             { source: "Methoden", target: "gipse.html" },
             { source: "Methoden", target: "hps.html" },
-            
-            { source: "Wissenstransfer", target: "plus" },
+            { source: "Methoden", target: "m3r.html" },
+            { source: "Methoden", target: "patrimonium.html" },
+            { source: "Methoden", target: "fercan.html" },
+            { source: "Methoden", target: "derla.html" },
+            { source: "Wissenstransfer", target: "derla.html" },
+            { source: "Wissenstransfer", target: "dhplus.html" },
+            { source: "Wissenstransfer", target: "dhlehre.html" },
+            { source: "Wissenstransfer", target: "habsburg.html" },
             
             { source: "Infra", target: "gams" },
             { source: "Infra", target: "arche" },
@@ -61,9 +75,10 @@
             { source: "unigraz", target: "textvsvisual.html" },
             { source: "Innsbruck", target: "ficker.html" },
             { source: "Innsbruck", target: "holzmeister.html" },
-            { source: "Innsbruck", target: "fotodb.html" },
+            { source: "Innsbruck", target: "fotodatenbank.html" },
             { source: "Innsbruck", target: "rnab.html" },
             { source: "Uni Wien", target: "phaidra" },
+            { source: "Uni Wien", target: "habsburg.html" },
             { source: "Cima", target: "Uni Wien" },
             { source: "Cima", target: "Uni Krems" },
             { source: "Cima", target: "TU Wien" },
@@ -72,11 +87,7 @@
             { source: "ABK", target: "m3r.html" },
             { source: "onb", target: "onbkulturerbe.html" },
             
-            { source: "Methoden", target: "m3r.html" },
-            { source: "Methoden", target: "patrimonium.html" },
-            { source: "Methoden", target: "fercan.html" },
-            { source: "Methoden", target: "derla.html" },
-            { source: "Wissenstransfer", target: "derla.html" },
+
             { source: "TU Wien", target: "m3r.html" },
             { source: "Uni Krems", target: "m3r.html" },
             
