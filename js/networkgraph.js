@@ -18,27 +18,27 @@
             { id: "onb", name: "ÖNB", category: "Organisationen", color: "#660000" },
             
             /*infrastructure-nodes*/
-            { id: "https://gams.uni-graz.at", name: "GAMS", category: "Infrastruktur", color: "#666600" },
-            { id: "https://arche.acdh.oeaw.ac.at", name: "ARCHE", category: "Infrastruktur", color: "#666600" },
-            { id: "phaidra.html", name: "PHAIDRA", category: "Infrastruktur", category2: "Organisationen", color: "#666600" },
+            { id: "https://gams.uni-graz.at", name: "GAMS", category: "Infrastruktur", color: "#666600", clickable: true},
+            { id: "https://arche.acdh.oeaw.ac.at", name: "ARCHE", category: "Infrastruktur", color: "#666600", clickable: true},
+            { id: "https://phaidra.univie.ac.at", name: "PHAIDRA", category: "Infrastruktur", category2: "Organisationen", color: "#666600", clickable: true},
             
             /*project nodes*/
-            { id: "fercan.html", name: "FERCAN", category: "Projekte", year: 2020, color: "#006600" },
-            { id: "derla.html", name: "DERLA", category: "Projekte", category2: "MethodenTools", year: 2020, color: "#006600" },
-            { id: "ficker.html", name: "Ficker-Edition", category: "Projekte", year: 2020, color: "#006600" },
-            { id: "hps.html", name: "HPS", category: "Projekte", year: 2024, color: "#006600" },
-            { id: "gipse.html", name: "GIPSE", category: "Projekte", year: 2024, color: "#006600" },
-            { id: "digi16.html", name: "DIGI 16", category: "Projekte", year: 2024, color: "#006600" },
-            { id: "m3r.html", name: "M3R", category: "Projekte", category2: "MethodenTools", year: 2022, color: "#006600" },
-            { id: "patrimonium.html", name: "PATRIMONIUM", category: "Projekte", category2: "MethodenTools", year: 2023, color: "#006600" },
-            { id: "onbkulturerbe.html", name: "Kulturerbe", category: "Projekte", year: 2023, color: "#006600" },
-            { id: "textvsvisual.html", name: "Text vs Visual", category: "Projekte", year: 2023, color: "#006600" },
-            { id: "holzmeister.html", name: "Holzmeister", category: "Projekte", year: 2023, color: "#006600" },
-            { id: "fotodatenbank.html", name: "Fotodatenbank", category: "Projekte", year: 2023, color: "#006600" },
-            { id: "rnab.html", name: "RNAB", category: "Projekte", year: 2023, color: "#006600" },
-            { id: "dhlehre.html", name: "DH Lehre", category: "Projekte", year: 2023, color: "#006600" },
-            { id: "habsburg.html", name: "Habsburg", category: "Projekte", year: 2021, color: "#006600" },
-            { id: "dhplus.html", name: "DH Plus", category: "Projekte", color: "#660000" },
+            { id: "fercan.html", name: "FERCAN", category: "Projekte", year: 2020, color: "#006600", clickable: true},
+            { id: "derla.html", name: "DERLA", category: "Projekte", category2: "MethodenTools", year: 2020, color: "#006600", clickable: true},
+            { id: "ficker.html", name: "Ficker-Edition", category: "Projekte", year: 2020, color: "#006600", clickable: true},
+            { id: "hps.html", name: "HPS", category: "Projekte", year: 2024, color: "#006600", clickable: true},
+            { id: "gipse.html", name: "GIPSE", category: "Projekte", year: 2024, color: "#006600", clickable: true},
+            { id: "digi16.html", name: "DIGI 16", category: "Projekte", year: 2024, color: "#006600", clickable: true},
+            { id: "m3r.html", name: "M3R", category: "Projekte", category2: "MethodenTools", year: 2022, color: "#006600", clickable: true},
+            { id: "patrimonium.html", name: "PATRIMONIUM", category: "Projekte", category2: "MethodenTools", year: 2023, color: "#006600", clickable: true},
+            { id: "onbkulturerbe.html", name: "Kulturerbe", category: "Projekte", year: 2023, color: "#006600", clickable: true},
+            { id: "textvsvisual.html", name: "Text vs Visual", category: "Projekte", year: 2023, color: "#006600", clickable: true},
+            { id: "holzmeister.html", name: "Holzmeister", category: "Projekte", year: 2023, color: "#006600", clickable: true},
+            { id: "fotodatenbank.html", name: "Fotodatenbank", category: "Projekte", year: 2023, color: "#006600", clickable: true},
+            { id: "rnab.html", name: "RNAB", category: "Projekte", year: 2023, color: "#006600", clickable: true},
+            { id: "dhlehre.html", name: "DH Lehre", category: "Projekte", year: 2023, color: "#006600", clickable: true},
+            { id: "habsburg.html", name: "Habsburg", category: "Projekte", year: 2021, color: "#006600", clickable: true},
+            { id: "dhplus.html", name: "DH Plus", category: "Projekte", color: "#660000", clickable: true},
 
         ];
 
@@ -47,7 +47,7 @@
             { source: "Infra", target: "Wissenstransfer" },
             
             { source: "Infra", target: "habsburg.html" },
-            { source: "Infra", target: "phaidra.html" },
+            { source: "Infra", target: "https://phaidra.univie.ac.at" },
             { source: "Infra", target: "onbkulturerbe.html" },
             { source: "Infra", target: "rnab.html" },
             { source: "Infra", target: "fotodatenbank.html" },
@@ -76,7 +76,7 @@
              
             { source: "Infra", target: "https://gams.uni-graz.at" },
             { source: "Infra", target: "https://arche.acdh.oeaw.ac.at" },
-            { source: "Infra", target: "phaidra.html" },
+            { source: "Infra", target: "https://phaidra.univie.ac.at" },
             { source: "https://gams.uni-graz.at", target: "unigraz" },
             { source: "https://arche.acdh.oeaw.ac.at", target: "öaw" },
             
@@ -91,7 +91,7 @@
             { source: "Innsbruck", target: "holzmeister.html" },
             { source: "Innsbruck", target: "fotodatenbank.html" },
             { source: "Innsbruck", target: "rnab.html" },
-            { source: "Uni Wien", target: "phaidra.html" },
+            { source: "Uni Wien", target: "https://phaidra.univie.ac.at" },
             { source: "Uni Wien", target: "habsburg.html" },
             { source: "Uni Wien", target: "dhlehre.html" },
             { source: "Cima", target: "Uni Wien" },
@@ -180,25 +180,27 @@ function createNodes(nodesData) {
     const enterNodes = nodeGroup.enter().append("g")
         .attr("class", "nodeng")
         .on("click", (event, d) => {
-            window.open(d.id, '_blank');
-        })
-        .on("mouseover", (event, d) => {
-            tooltip.style("opacity", 1)
-                .html(d.name)
-                .style("left", `${event.pageX + 5}px`)
-                .style("top", `${event.pageY + 5}px`);
-        })
-        .on("mousemove", (event, d) => {
-            tooltip.style("left", `${event.pageX + 5}px`)
-                .style("top", `${event.pageY + 5}px`);
-        })
-        .on("mouseout", () => {
-            tooltip.style("opacity", 0);
-        })
-        .call(d3.drag()
-            .on("start", dragstarted)
-            .on("drag", dragged)
-            .on("end", dragended));
+            if (d.clickable) {
+                window.open(d.id, '_blank');
+            }
+    })
+    .on("mouseover", (event, d) => {
+        tooltip.style("opacity", 1)
+            .html(d.name)
+            .style("left", `${event.pageX + 5}px`)
+            .style("top", `${event.pageY + 5}px`);
+    })
+    .on("mousemove", (event, d) => {
+        tooltip.style("left", `${event.pageX + 5}px`)
+            .style("top", `${event.pageY + 5}px`);
+    })
+    .on("mouseout", () => {
+        tooltip.style("opacity", 0);
+    })
+    .call(d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended));
 
     enterNodes.append("circle")
         .attr("r", d => d.radius)
