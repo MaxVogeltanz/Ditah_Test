@@ -1,12 +1,12 @@
 
         const nodes = [
             /*3 basic nodes*/
-            { id: "Infra", name: "Infrastruktur", category: "Säule", color: "#004567" },
+            { id: "Infra", name: "Infrastruktur", category: "Säule", year: 2020, color: "#004567" },
             { id: "Methoden", name: "Methoden & Tools", category: "Säule", year: 2020, color: "#004567" },
             { id: "Wissenstransfer", name: "Wissentransfer", category: "Säule", year: 2020, color: "#004567" },
             
             /*organisation nodes*/
-            { id: "öaw", name: "ÖAW", category: "Organisationen", color: "#660000" },
+            { id: "partner.html#oaw", name: "ÖAW", category: "Organisationen", color: "#660000", clickable: true},
             { id: "TU Wien", name: "TU Wien", category: "Organisationen", color: "#660000" },
             { id: "Innsbruck", name: "Uni Innsbruck", category: "Organisationen", color: "#660000" },
             { id: "unigraz", name: "Uni Graz", category: "Organisationen", color: "#660000" },
@@ -20,7 +20,7 @@
             /*infrastructure-nodes*/
             { id: "https://gams.uni-graz.at", name: "GAMS", category: "Infrastruktur", color: "#666600", clickable: true},
             { id: "https://arche.acdh.oeaw.ac.at", name: "ARCHE", category: "Infrastruktur", color: "#666600", clickable: true},
-            { id: "https://phaidra.univie.ac.at", name: "PHAIDRA", category: "Infrastruktur", category2: "Organisationen", color: "#666600", clickable: true},
+            { id: "https://phaidra.univie.ac.at", name: "PHAIDRA", category: "Infrastruktur", color: "#666600", clickable: true},
             
             /*project nodes*/
             { id: "fercan.html", name: "FERCAN", category: "Projekte", year: 2020, color: "#006600", clickable: true},
@@ -38,7 +38,8 @@
             { id: "rnab.html", name: "RNAB", category: "Projekte", year: 2023, color: "#006600", clickable: true},
             { id: "dhlehre.html", name: "DH Lehre", category: "Projekte", year: 2023, color: "#006600", clickable: true},
             { id: "habsburg.html", name: "Habsburg", category: "Projekte", year: 2021, color: "#006600", clickable: true},
-            { id: "dhplus.html", name: "DH Plus", category: "Projekte", color: "#660000", clickable: true},
+            { id: "dhplus.html", name: "DH Plus", category: "Projekte", color: "#006600", clickable: true},
+            { id: "training.html", name: "training", category: "Projekte", color: "#006600", clickable: true},
 
         ];
 
@@ -53,6 +54,7 @@
             { source: "Infra", target: "fotodatenbank.html" },
             { source: "Infra", target: "holzmeister.html" },
             { source: "Infra", target: "ficker.html" },
+            { source: "Infra", target: "digi16.html" },
             
             { source: "Methoden", target: "Wissenstransfer" },
             
@@ -67,18 +69,19 @@
             { source: "Methoden", target: "onbkulturerbe.html" },
             { source: "Methoden", target: "rnab.html" },
             { source: "Methoden", target: "fotodatenbank.html" },
+            { source: "Methoden", target: "digi16.html" },
             
             { source: "Wissenstransfer", target: "derla.html" },
             { source: "Wissenstransfer", target: "dhplus.html" },
             { source: "Wissenstransfer", target: "dhlehre.html" },
             { source: "Wissenstransfer", target: "habsburg.html" },
-             { source: "Wissenstransfer", target: "onbkulturerbe.html" },
+            { source: "Wissenstransfer", target: "onbkulturerbe.html" },
              
             { source: "Infra", target: "https://gams.uni-graz.at" },
             { source: "Infra", target: "https://arche.acdh.oeaw.ac.at" },
             { source: "Infra", target: "https://phaidra.univie.ac.at" },
             { source: "https://gams.uni-graz.at", target: "unigraz" },
-            { source: "https://arche.acdh.oeaw.ac.at", target: "öaw" },
+            { source: "https://arche.acdh.oeaw.ac.at", target: "partner.html#oaw" },
             
             { source: "unigraz", target: "derla.html" },
             { source: "unigraz", target: "hps.html" },
@@ -102,6 +105,7 @@
             { source: "ABK", target: "m3r.html" },
             { source: "onb", target: "onbkulturerbe.html" },
             { source: "plus", target: "dhplus.html" },
+            { source: "partner.html#oaw", target: "training.html" },
             
             { source: "TU Wien", target: "m3r.html" },
             { source: "Uni Krems", target: "m3r.html" },
