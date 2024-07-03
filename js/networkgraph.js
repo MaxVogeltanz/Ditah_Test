@@ -7,15 +7,15 @@
             
             /*organisation nodes*/
             { id: "partner.html#oaw", name: "ÖAW", category: "Organisationen", color: "#660000", clickable: true},
-            { id: "TU Wien", name: "TU Wien", category: "Organisationen", color: "#660000" },
-            { id: "Innsbruck", name: "Uni Innsbruck", category: "Organisationen", color: "#660000" },
-            { id: "unigraz", name: "Uni Graz", category: "Organisationen", color: "#660000" },
-            { id: "plus", name: "PLUS", category: "Organisationen", color: "#660000" },
+            { id: "partner.html#tuw", name: "TU Wien", category: "Organisationen", color: "#660000", clickable: true},
+            { id: "partner.html#ui", name: "Uni Innsbruck", category: "Organisationen", color: "#660000", clickable: true},
+            { id: "partner.html#ug", name: "Uni Graz", category: "Organisationen", color: "#660000", clickable: true},
+            { id: "partner.html#plus", name: "PLUS", category: "Organisationen", color: "#660000", clickable: true},
             { id: "Cima", name: "CIMA", category: "Organisationen", color: "#660066" },
-            { id: "ABK", name: "ABK", category: "Organisationen", color: "#660000" },
-            { id: "Uni Krems", name: "UWK", category: "Organisationen", color: "#660000" },
-            { id: "Uni Wien", name: "Uni Wien", category: "Organisationen", color: "#660000" },
-            { id: "onb", name: "ÖNB", category: "Organisationen", color: "#660000" },
+            { id: "partner.html#abk", name: "ABK", category: "Organisationen", color: "#660000", clickable: true},
+            { id: "partner.html#krems", name: "UWK", category: "Organisationen", color: "#660000", clickable: true},
+            { id: "partner.html#uw", name: "Uni Wien", category: "Organisationen", color: "#660000", clickable: true},
+            { id: "partner.html#onb", name: "ÖNB", category: "Organisationen", color: "#660000", clickable: true},
             
             /*infrastructure-nodes*/
             { id: "https://gams.uni-graz.at", name: "GAMS", category: "Infrastruktur", color: "#666600", clickable: true},
@@ -80,38 +80,38 @@
             { source: "Infra", target: "https://gams.uni-graz.at" },
             { source: "Infra", target: "https://arche.acdh.oeaw.ac.at" },
             { source: "Infra", target: "https://phaidra.univie.ac.at" },
-            { source: "https://gams.uni-graz.at", target: "unigraz" },
+            { source: "https://gams.uni-graz.at", target: "partner.html#ug" },
             { source: "https://arche.acdh.oeaw.ac.at", target: "partner.html#oaw" },
             
-            { source: "unigraz", target: "derla.html" },
-            { source: "unigraz", target: "hps.html" },
-            { source: "unigraz", target: "gipse.html" },
-            { source: "unigraz", target: "fercan.html" },
-            { source: "unigraz", target: "digi16.html" },
-            { source: "unigraz", target: "patrimonium.html" },
-            { source: "unigraz", target: "textvsvisual.html" },
-            { source: "Innsbruck", target: "ficker.html" },
-            { source: "Innsbruck", target: "holzmeister.html" },
-            { source: "Innsbruck", target: "fotodatenbank.html" },
-            { source: "Innsbruck", target: "rnab.html" },
-            { source: "Uni Wien", target: "https://phaidra.univie.ac.at" },
-            { source: "Uni Wien", target: "habsburg.html" },
-            { source: "Uni Wien", target: "dhlehre.html" },
-            { source: "Cima", target: "Uni Wien" },
-            { source: "Cima", target: "Uni Krems" },
-            { source: "Cima", target: "TU Wien" },
-            { source: "Cima", target: "ABK" },
+            { source: "partner.html#ug", target: "derla.html" },
+            { source: "partner.html#ug", target: "hps.html" },
+            { source: "partner.html#ug", target: "gipse.html" },
+            { source: "partner.html#ug", target: "fercan.html" },
+            { source: "partner.html#ug", target: "digi16.html" },
+            { source: "partner.html#ug", target: "patrimonium.html" },
+            { source: "partner.html#ug", target: "textvsvisual.html" },
+            { source: "partner.html#ui", target: "ficker.html" },
+            { source: "partner.html#ui", target: "holzmeister.html" },
+            { source: "partner.html#ui", target: "fotodatenbank.html" },
+            { source: "partner.html#ui", target: "rnab.html" },
+            { source: "partner.html#uw", target: "https://phaidra.univie.ac.at" },
+            { source: "partner.html#uw", target: "habsburg.html" },
+            { source: "partner.html#uw", target: "dhlehre.html" },
+            { source: "Cima", target: "partner.html#uw" },
+            { source: "Cima", target: "partner.html#krems" },
+            { source: "Cima", target: "partner.html#tuw" },
+            { source: "Cima", target: "partner.html#abk" },
             { source: "Cima", target: "m3r.html" },
-            { source: "ABK", target: "m3r.html" },
-            { source: "onb", target: "onbkulturerbe.html" },
-            { source: "plus", target: "dhplus.html" },
+            { source: "partner.html#abk", target: "m3r.html" },
+            { source: "partner.html#onb", target: "onbkulturerbe.html" },
+            { source: "partner.html#plus", target: "dhplus.html" },
             { source: "partner.html#oaw", target: "training.html" },
             
-            { source: "TU Wien", target: "m3r.html" },
-            { source: "Uni Krems", target: "m3r.html" },
+            { source: "partner.html#tuw", target: "m3r.html" },
+            { source: "partner.html#krems", target: "m3r.html" },
             
             { source: "patrimonium.html", target: "fercan.html" },
-            { source: "m3r.html", target: "Uni Wien" },
+            { source: "m3r.html", target: "partner.html#uw" },
 
         ];
 
@@ -336,5 +336,4 @@ d3.select("#filterProjekte").on("change", updateGraph);
 d3.select("#timeline").on("input", function() {
     d3.select("#timelineValue").text(this.value);
     updateGraph();
-
 });
