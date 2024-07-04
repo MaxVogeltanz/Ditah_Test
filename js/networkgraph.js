@@ -3,7 +3,7 @@
             /*3 basic nodes*/
             { id: "Infra", name: "Infrastruktur", category: "Säule", year: 2020, color: "#004567" },
             { id: "Methoden", name: "Methoden & Tools", category: "Säule", year: 2020, color: "#004567" },
-            { id: "Wissenstransfer", name: "Wissentransfer", category: "Säule", year: 2020, color: "#004567" },
+            { id: "Wissenstransfer", name: "Wissenstransfer", category: "Säule", year: 2020, color: "#004567" },
             
             /*organisation nodes*/
             { id: "partner.html#oaw", name: "ÖAW", category: "Organisationen", color: "#660000", clickable: true},
