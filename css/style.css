@@ -2126,6 +2126,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 /* nav overlay */
 .helpoverlay {
 margin-left: 3.5em;
+  margin-top: 6em;
     height: 100%;
   width: 0;
   position: fixed;
