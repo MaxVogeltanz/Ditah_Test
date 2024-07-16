@@ -11,7 +11,7 @@
             { id: "partner.html#ui", name: "Uni Innsbruck", category: "Organisationen", color: "#660000", clickable: true},
             { id: "partner.html#ug", name: "Uni Graz", category: "Organisationen", color: "#660000", clickable: true},
             { id: "partner.html#plus", name: "PLUS", category: "Organisationen", color: "#660000", clickable: true},
-            { id: "Cima", name: "CIMA", category: "Organisationen", color: "#660066" },
+            { id: "Cima", name: "cima.html", category: "Organisationen", color: "#660066" },
             { id: "partner.html#abk", name: "ABK", category: "Organisationen", color: "#660000", clickable: true},
             { id: "partner.html#krems", name: "UWK", category: "Organisationen", color: "#660000", clickable: true},
             { id: "partner.html#uw", name: "Uni Wien", category: "Organisationen", color: "#660000", clickable: true},
@@ -40,6 +40,9 @@
             { id: "habsburg.html", name: "Habsburg", category: "Projekte", year: 2021, color: "#006600", clickable: true},
             { id: "dhplus.html", name: "DH Plus", category: "Projekte", color: "#006600", clickable: true},
             { id: "training.html", name: "training", category: "Projekte", color: "#006600", clickable: true},
+            { id: "pez.html", name: "Dataset Pez", category: "Projekte", color: "#006600", clickable: true},
+            { id: "clio.html", name: "Clio-Guide Austria", category: "Projekte", color: "#006600", clickable: true},
+            { id: "newsuw.html", name: "Newsletter Archive", category: "Projekte", color: "#006600", clickable: true},
 
         ];
 
@@ -55,6 +58,7 @@
             { source: "Infra", target: "holzmeister.html" },
             { source: "Infra", target: "ficker.html" },
             { source: "Infra", target: "digi16.html" },
+            { source: "Infra", target: "pez.html" },
             
             { source: "Methoden", target: "Wissenstransfer" },
             
@@ -76,6 +80,8 @@
             { source: "Wissenstransfer", target: "dhlehre.html" },
             { source: "Wissenstransfer", target: "habsburg.html" },
             { source: "Wissenstransfer", target: "onbkulturerbe.html" },
+            { source: "Wissenstransfer", target: "clio.html" },
+            { source: "Wissenstransfer", target: "newsuw.html" },
              
             { source: "Infra", target: "https://gams.uni-graz.at" },
             { source: "Infra", target: "https://arche.acdh.oeaw.ac.at" },
@@ -97,6 +103,9 @@
             { source: "partner.html#uw", target: "https://phaidra.univie.ac.at" },
             { source: "partner.html#uw", target: "habsburg.html" },
             { source: "partner.html#uw", target: "dhlehre.html" },
+            { source: "partner.html#uw", target: "pez.html" },
+            { source: "partner.html#uw", target: "clio.html" },
+            { source: "partner.html#uw", target: "newsuw.html" },
             { source: "Cima", target: "partner.html#uw" },
             { source: "Cima", target: "partner.html#krems" },
             { source: "Cima", target: "partner.html#tuw" },
@@ -106,6 +115,9 @@
             { source: "partner.html#onb", target: "onbkulturerbe.html" },
             { source: "partner.html#plus", target: "dhplus.html" },
             { source: "partner.html#oaw", target: "training.html" },
+            { source: "habsburg.html", target: "pez.html" },
+            { source: "habsburg.html", target: "clio.html" },
+            { source: "habsburg.html", target: "newsuw.html" },
             
             { source: "partner.html#tuw", target: "m3r.html" },
             { source: "partner.html#krems", target: "m3r.html" },
