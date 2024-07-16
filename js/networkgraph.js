@@ -11,7 +11,7 @@
             { id: "partner.html#ui", name: "Uni Innsbruck", category: "Organisationen", color: "#660000", clickable: true},
             { id: "partner.html#ug", name: "Uni Graz", category: "Organisationen", color: "#660000", clickable: true},
             { id: "partner.html#plus", name: "PLUS", category: "Organisationen", color: "#660000", clickable: true},
-            { id: "Cima", name: "cima.html", category: "Organisationen", color: "#660066" },
+            { id: "cima.html", name: "CIMA", category: "Organisationen", color: "#660066" },
             { id: "partner.html#abk", name: "ABK", category: "Organisationen", color: "#660000", clickable: true},
             { id: "partner.html#krems", name: "UWK", category: "Organisationen", color: "#660000", clickable: true},
             { id: "partner.html#uw", name: "Uni Wien", category: "Organisationen", color: "#660000", clickable: true},
