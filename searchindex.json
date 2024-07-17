@@ -2,25 +2,25 @@
   {
     "id": 1,
     "title": "Digitale Erinnerungslandschaft Österreichs (DERLA)",
-    "content": "Karte, Erinnerung, Erinnerungsort, Denkmal, interaktive Karte, interaktiv",
-    "url": "https://example.com/derla"
+    "content": "Karte",
+    "url": "derla.html"
   },
   {
     "id": 2,
-    "title": "Manifesten und nicht-manifesten Erinnerungsorten",
-    "content": "DERLA unterscheidet zwischen manifesten und nicht-manifesten Erinnerungsorten. Unter manifesten Erinnerungsorten werden jene verstanden, die durch Erinnerungszeichen (Denkmäler, Gedenktafeln, u.a.) als Erinnerungsorte in der Öffentlichkeit sichtbar gemacht werden. Nicht-manifeste Erinnerungsorte sind Erinnerungsorte, die bislang über kein öffentlich sichtbares Erinnerungszeichen verfügen, jedoch einen historischen Bezug zu Opfern und/oder dem Terror des Nationalsozialismus und Faschismus aufweisen. Ihnen wird mit DERLA ein virtuelles Zeichen gesetzt.",
-    "url": "https://example.com/manifesten-und-nicht-manifesten-erinnerungsorten"
+    "title": "Digitale Erinnerungslandschaft Österreichs (DERLA)",
+    "content": "Erinnerungsort",
+    "url": "derla.html"
   },
   {
     "id": 3,
-    "title": "Informationen zu Erinnerungsorten",
-    "content": "Jeder Erinnerungsort wird mit Informationen zum historischen Ereignis oder den Personen, an die am Ort erinnert wird, ebenso wie zur Geschichte des Erinnerungszeichens/-ortes selbst versehen. Weiters werden die Erinnerungszeichen/-orte zur besseren Orientierung der NutzerInnen sowie in Bezug auf die Vermittlungsangebote unterschiedlichen Kategorien zugeordnet. Diese Kategorien orientieren sich an der Intention der Stifter und Errichter der Erinnerungszeichen sowie im Fall der nicht-manifesten Erinnerungsorte an den historischen Ereignissen/Erfahrungen, die mit dem jeweiligen Ort verbunden sind.",
-    "url": "https://example.com/informationen-zu-erinnerungsorten"
+    "title": "Digitale Erinnerungslandschaft Österreichs (DERLA)",
+    "content": "Nationalsozialismus",
+    "url": "derla.html"
   },
   {
     "id": 4,
-    "title": "Vier wesentliche Elemente von DERLA",
-    "content": "DERLA besteht aus vier wesentlichen Elementen: Eine interaktive Karte der Erinnerung führt zu den einzelnen Erinnerungsorten und -zeichen und macht deren Geschichte sichtbar. Mittels Filter- und Suchfunktionen können Sie umfangreiche Recherchen durchführen. Im Archiv der Namen werden all jene Menschen, die auf den Erinnerungszeichen genannt und erinnert werden, biografisch vorgestellt. DERLA setzt ihnen ein virtuelles Erinnerungszeichen. Derzeit sind mehr als 1300 Biographien in DERLA erfasst. Im Vermittlungsportal finden sich ortsgebundene und ortsungebundene Angebote für die schulische Vermittlungsarbeit. Das historische Lernen mit DERLA kann sowohl vor Ort als auch im Klassenzimmer erfolgen. Die Wege der Erinnerung führen entlang kuratierter Routen in spezifische Themen der Geschichte des Nationalsozialismus und der Erinnerungskultur ein. Sie sind virtuelle Ausstellungen zu spezifischen Themen.",
-    "url": "https://example.com/vier-wesentliche-elemente-von-derla"
+    "title": "Digitale Erinnerungslandschaft Österreichs (DERLA)",
+    "content": "interaktiv",
+    "url": "derla.html"
   }
 ]
