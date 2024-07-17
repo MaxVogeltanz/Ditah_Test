@@ -12,7 +12,12 @@
     <body>
         <div class="container">
             <h1 class="mt-5">Search Example with Lunr.js and Bootstrap</h1>
-            <input type="text" id="searchBox" class="form-control" placeholder="Search..." oninput="search()" />
+            <div class="input-group mb-3">
+                <input type="text" id="searchBox" class="form-control" placeholder="Search..." aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="search()">Search</button>
+                </div>
+            </div>
         </div>
         
         <!-- Modal -->
