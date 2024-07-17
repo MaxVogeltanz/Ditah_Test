@@ -64,7 +64,13 @@
         }
 
         function search() {
-            const query = document.getElementById('searchBox').value;
+            const query = document.getElementById('searchBox').value.trim();
+            
+            if (query === "") {
+                // Do not show modal if the search query is empty
+                return;
+            }
+
             const results = idx.search(query);
             displayResults(results);
         }
