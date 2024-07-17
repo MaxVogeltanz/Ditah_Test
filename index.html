@@ -279,28 +279,27 @@
     
     
   <div class="container">
-    <h4>Suche</h4>
+    <h3>Suche</h3>
     <div class="input-group mb-3">
-      <input type="text" id="searchBox" class="form-control" placeholder="Search..." aria-label="Search" style="border-color: #004567; border: solid 0.5px;">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button" style="border-color: #004567;" onclick="search()">Suche</button>
-      </div>
+      <input type="text" id="searchBox" class="form-control" placeholder="Suchbegriff eingeben..." aria-label="Search" style="border-color: #004567; border: solid 0.5px; border-radius: 3px;">
+      <button class="btn btn-outline-secondary" type="button" style="border-color: #004567; border: solid 0.5px;" onclick="search()">Suche</button>
     </div>
   </div>
+  
   
   <!-- Modal -->
   <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="resultsModalLabel">Search Results</h5>
+          <h5 class="modal-title" id="resultsModalLabel">Suchergebnisse</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body" id="results"></div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
         </div>
       </div>
     </div>
@@ -1001,7 +1000,7 @@ document.getElementById("helpOverlay").style.width = "0%";
                     const truncatedContent = item.content.length > 200 ? item.content.substring(0, 200) + '...' : item.content; // Truncate content to 200 characters
                     const div = document.createElement('div');
                     div.classList.add('result-item', 'mb-3');
-                    div.innerHTML = `<h4><a href="${item.url}" target="_blank">${item.title}</a></h4><p>${truncatedContent}</p>`;
+                    div.innerHTML = `<h4><a href="${item.url}" target="_blank">${item.title}</a></h4><p>${truncatedContent}</p><p><a href="${item.url}" target="_blank">Zum Ergebnis</a></p>`;
                     resultsDiv.appendChild(div);
                 });
             }
