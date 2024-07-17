@@ -75,6 +75,14 @@
             pointer-events: none;
             opacity: 0;
         }
+        .btn-outline-secondary {
+            border-color: #004567;
+            border: solid 0.5px;
+        }
+        .btn-outline-secondary:hover {
+            background-color: #004567; /* Highlighting color */
+            color: white; /* Optional: change text color */
+        }
         </style>
   
 </head>
@@ -277,7 +285,7 @@
       
     </div>
     
-    
+  <!--search bar-->  
   <div class="container">
     <h3>Suche</h3>
     <div class="input-group mb-3">
@@ -287,7 +295,7 @@
   </div>
   
   
-  <!-- Modal -->
+  <!-- Modal for search bar, opens when search button is clicked-->
   <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -993,14 +1001,14 @@ document.getElementById("helpOverlay").style.width = "0%";
             resultsDiv.innerHTML = '';
 
             if (results.length === 0) {
-                resultsDiv.innerHTML = '<p>No results found</p>';
+                resultsDiv.innerHTML = '<p>Keine Ergebnisse gefunden</p>';
             } else {
                 results.forEach(result => {
                     const item = documents.find(doc => doc.id == result.ref);
                     const truncatedContent = item.content.length > 200 ? item.content.substring(0, 200) + '...' : item.content; // Truncate content to 200 characters
                     const div = document.createElement('div');
                     div.classList.add('result-item', 'mb-3');
-                    div.innerHTML = `<h5><a href="${item.url}" target="_blank">${item.title}</a></h5><p><a href="${item.url}" target="_blank">-> Zum Ergebnis</a></p><p>${truncatedContent}</p>`;
+                    div.innerHTML = `<h4><a href="${item.url}" target="_blank">${item.title}</a></h4><p><a href="${item.url}" target="_blank">-> Zum Ergebnis</a></p><p>${truncatedContent}</p>`;
                     resultsDiv.appendChild(div);
                 });
             }
