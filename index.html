@@ -197,15 +197,37 @@
              <!-- für unterseiten node graph
                <li  data-toggle="modal" data-target="#exampleModal"><!-\-<a href="#graphoverlay" id="showGraph" onclick="navGraph()">-\-><img src="images/node-plus.svg" alt="nodeicon"/><!-\-</a>-\-></li>
             -->  
-            </ul>
+              <li class="active"><input type="text" id="searchBox" class="form-control" placeholder="Search..." aria-label="Search"><span class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="search()">Search</button>
+              </span></li>
 
+            </ul>
            
             <a href="#" class="burger light ml-auto site-menu-toggle js-menu-toggle d-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
               <span></span>
             </a>
 
           </div>
-
+          
+          <!-- Modal -->
+          <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="resultsModalLabel">Search Results</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="results"></div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
         </div>  
       </nav> 
       <!-- END nav -->
@@ -907,6 +929,63 @@ function closeOverlay() {
 document.getElementById("helpOverlay").style.width = "0%";
 }
   </script>
+  <script>
+        let documents = [];
+
+        fetch('searchindex.json')
+            .then(response => response.json())
+            .then(data => {
+                documents = data;
+                initializeLunr();
+            })
+            .catch(error => console.error('Error fetching the JSON:', error));
+
+        let idx;
+
+        function initializeLunr() {
+            idx = lunr(function () {
+                this.ref('id');
+                this.field('title');
+                this.field('content');
+
+                documents.forEach(function (doc) {
+                    this.add(doc);
+                }, this);
+            });
+        }
+
+        function search() {
+            const query = document.getElementById('searchBox').value.trim();
+            
+            if (query === "") {
+                // Do not show modal if the search query is empty
+                return;
+            }
+
+            const results = idx.search(query);
+            displayResults(results);
+        }
+
+        function displayResults(results) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<p>No results found</p>';
+            } else {
+                results.forEach(result => {
+                    const item = documents.find(doc => doc.id == result.ref);
+                    const truncatedContent = item.content.length > 200 ? item.content.substring(0, 200) + '...' : item.content; // Truncate content to 200 characters
+                    const div = document.createElement('div');
+                    div.classList.add('result-item', 'mb-3');
+                    div.innerHTML = `<h4><a href="${item.url}" target="_blank">${item.title}</a></h4><p>${truncatedContent}</p>`;
+                    resultsDiv.appendChild(div);
+                });
+            }
+
+            $('#resultsModal').modal('show');
+        }
+    </script>
   
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
