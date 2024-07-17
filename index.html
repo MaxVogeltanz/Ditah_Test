@@ -276,7 +276,35 @@
       </div>
       
     </div>
+    
+    
+  <div class="container">
+    <h4>Suche</h4>
+    <div class="input-group mb-3">
+      <input type="text" id="searchBox" class="form-control" placeholder="Search..." aria-label="Search" style="border-color: #004567; border: solid 0.5px;">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" style="border-color: #004567;" onclick="search()">Suche</button>
+      </div>
+    </div>
+  </div>
   
+  <!-- Modal -->
+  <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="resultsModalLabel">Search Results</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="results"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   
 
   <div class="features-lg">
@@ -673,33 +701,7 @@
     </div>
 
     -->
-  <div class="container">
-    <h1 class="mt-5">Search</h1>
-    <div class="input-group mb-3">
-      <input type="text" id="searchBox" class="form-control" placeholder="Search..." aria-label="Search">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button" onclick="search()">Search</button>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="resultsModalLabel">Search Results</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body" id="results"></div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
   
   <div class="testimonial-section" style="margin-top: 10em;">
       <div class="container">
