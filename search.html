@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search with Lunr.js</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    </head>
+    <body>
+        <h1>Search Example with Lunr.js</h1>
+        <input type="text" id="searchBox" placeholder="Search..." oninput="search()" />
+        <div id="results"></div>
+        
+        <script>
+        let documents = [];
+
+        fetch('searchindex.json')
+            .then(response => response.json())
+            .then(data => {
+                documents = data;
+                initializeLunr();
+            });
+
+        let idx;
+
+        function initializeLunr() {
+            idx = lunr(function () {
+                this.ref('id');
+                this.field('title');
+                this.field('content');
+
+                documents.forEach(function (doc) {
+                    this.add(doc);
+                }, this);
+            });
+        }
+
+        function search() {
+            const query = document.getElementById('searchBox').value;
+            const results = idx.search(query);
+            displayResults(results);
+        }
+
+        function displayResults(results) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<p>No results found</p>';
+                return;
+            }
+
+            results.forEach(result => {
+                const item = documents.find(doc => doc.id == result.ref);
+                const div = document.createElement('div');
+                div.innerHTML = `<h2><a href="${item.url}">${item.title}</a></h2><p>${item.content}</p>`;
+                resultsDiv.appendChild(div);
+            });
+        }
+    </script>
+    </body>
+</html>
