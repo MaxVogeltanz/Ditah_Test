@@ -197,9 +197,6 @@
              <!-- für unterseiten node graph
                <li  data-toggle="modal" data-target="#exampleModal"><!-\-<a href="#graphoverlay" id="showGraph" onclick="navGraph()">-\-><img src="images/node-plus.svg" alt="nodeicon"/><!-\-</a>-\-></li>
             -->  
-              <li class="active"><input type="text" id="searchBox" class="form-control" placeholder="Search..." aria-label="Search"><span class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" onclick="search()">Search</button>
-              </span></li>
 
             </ul>
            
@@ -208,30 +205,38 @@
             </a>
 
           </div>
-          
-          <!-- Modal -->
-          <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="resultsModalLabel">Search Results</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body" id="results"></div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          
+
         </div>  
       </nav> 
       <!-- END nav -->
-
+    <div class="container">
+      <h1 class="mt-5">Search</h1>
+      <div class="input-group mb-3">
+        <input type="text" id="searchBox" class="form-control" placeholder="Search..." aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" onclick="search()">Search</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="resultsModalLabel">Search Results</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="results"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     </div> 
   <!-- END container  end nav-->
 
@@ -929,6 +934,23 @@ function closeOverlay() {
 document.getElementById("helpOverlay").style.width = "0%";
 }
   </script>
+  
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/imagesloaded.pkgd.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/custom.js"></script>
+  
+<!--  <script src="js/TemporalMap.js"></script>-->
+  <script src="js/networkgraph.js"></script>
   <script>
         let documents = [];
 
@@ -986,24 +1008,6 @@ document.getElementById("helpOverlay").style.width = "0%";
             $('#resultsModal').modal('show');
         }
     </script>
-  
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.0.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/imagesloaded.pkgd.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/custom.js"></script>
-  
-<!--  <script src="js/TemporalMap.js"></script>-->
-  <script src="js/networkgraph.js"></script>
-  
  
   </body>
   </html>
