@@ -200,6 +200,32 @@
              <!-- für unterseiten node graph
                <li  data-toggle="modal" data-target="#exampleModal"><!-\-<a href="#graphoverlay" id="showGraph" onclick="navGraph()">-\-><img src="images/node-plus.svg" alt="nodeicon"/><!-\-</a>-\-></li>
             -->  
+              <div class="container">
+                <h3>Suche</h3>
+                <div class="input-group mb-3">
+                  <input type="text" id="searchBox" class="form-control" placeholder="Suchbegriff eingeben..." aria-label="Search" style="border-color: #004567; border: solid 0.5px; border-radius: 3px;">
+                  <button class="btn-sm btn-outline-secondary" type="button" style="border-color: #004567; border: solid 0.5px;" onclick="search()">Suche</button>
+                </div>
+              </div>
+              
+              
+              <!-- Modal for search bar, opens when search button is clicked-->
+              <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="resultsModalLabel">Suchergebnisse</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body" id="results"></div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #004567">Schließen</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </ul>
            
             <a href="#" class="burger light ml-auto site-menu-toggle js-menu-toggle d-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
