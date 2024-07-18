@@ -50,20 +50,21 @@
           /*  background-color: #f0f8ff;  Very light blue background color */
         }
         .containerng {
-        width: 150%;
-            height: 200%;
+        width: 70vw;
+            height: 95vh ;
           /*    background-position: center;
             background-size:cover;*/
             /*border: 1px solid #ddd;*/
             position: relative;
             overflow: hidden; /* Ensure anything outside the container is hidden */
+            font-size: 0.75em;
         }
         .nodeng {
             stroke: #fff;
             stroke-width: 1.5px;
         }
         .linkng {
-            stroke: #999;
+            stroke: #fff;
             stroke-opacity: 0.6;
         }
         .tooltipng {
@@ -74,6 +75,7 @@
             pointer-events: none;
             opacity: 0;
         }
+
         </style>
     
   </head>
@@ -163,30 +165,6 @@
     <!-- side nav-->
     
     
-    <aside id="graphoverlay" class="navoverlay">
-      <div><p><a href="javascript:void(0)" class="navclosebtn" onclick="closeGraph()" >&times;</a></p></div>
-      
-      <div class="navoverlaycontent">
-       <div id="graphnav" class="graph-containerng">
-        <div>
-          
-          <div class="containerng">
-            <svg width="100%" height="100%">
-              <defs>
-                <clipPath id="clip">
-                  <rect width="100%" height="100%"></rect>
-                </clipPath>
-              </defs>
-              <g id="graph" clip-path="url(#clip)"></g>
-            </svg>
-          </div>
-          <div class="tooltipng" id="tooltip"></div>
-        </div>
-      </div>
-      </div>
-    </aside>
-    
-  
     
     <div class="site-section site-cover-2" style="margin-top: 7em; background-image: url('images/hero-min.jpg')">
       <div class="container">

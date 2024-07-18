@@ -41,15 +41,6 @@
    
    
     <style>
-     
-  #animation_container, #_preload_div_ {
-	position: static;
-	margin:auto;
-	left:0;right:0;
-	top:0;bottom:0;
-  }
-
-      
         .graph-containerng {
             display: flex;
             justify-content: center;
@@ -86,56 +77,12 @@
             pointer-events: none;
             opacity: 0;
         }
+
         </style>
-    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-    <script src="js/figure1.js"></script>
-    <script>
-var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
-function init() {
-	canvas = document.getElementById("canvas");
-	anim_container = document.getElementById("animation_container");
-	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("19AC42603FA732438C3752E6D631C35D");
-	var lib=comp.getLibrary();
-	var loader = new createjs.LoadQueue(false);
-	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
-	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
-	var lib=comp.getLibrary();
-	loader.loadManifest(lib.properties.manifest);
-}
-function handleFileLoad(evt, comp) {
-	var images=comp.getImages();	
-	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
-}
-function handleComplete(evt,comp) {
-	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-	var lib=comp.getLibrary();
-	var ss=comp.getSpriteSheet();
-	var queue = evt.target;
-	var ssMetadata = lib.ssMetadata;
-	for(i=0; i<ssMetadata.length; i++) {
-		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
-	}
-	var preloaderDiv = document.getElementById("_preload_div_");
-	preloaderDiv.style.display = 'none';
-	canvas.style.display = 'block';
-	exportRoot = new lib.figure1();
-	stage = new lib.Stage(canvas);	
-	//Registers the "tick" event listener.
-	fnStartAnimation = function() {
-		stage.addChild(exportRoot);
-		createjs.Ticker.framerate = lib.properties.fps;
-		createjs.Ticker.addEventListener("tick", stage);
-	}	    
-	//Code to support hidpi screens and responsive scaling.
-	AdobeAn.makeResponsive(true,'both',false,1,[canvas,preloaderDiv,anim_container,dom_overlay_container]);	
-	AdobeAn.compositionLoaded(lib.properties.id);
-	fnStartAnimation();
-}
-</script>
+    
     
   </head>
-  <body onload="init();">
+  <body>
 
     <!-- nav start -->
     <div class="site-mobile-menu site-navbar-target sticky-top">
@@ -220,49 +167,8 @@ function handleComplete(evt,comp) {
       
     </div> 
     <!-- END container  end nav-->
-    <!-- side nav-->
-    
-    
-    <!--<aside id="graphoverlay" class="navoverlay">
-      <div><p><a href="javascript:void(0)" class="navclosebtn" onclick="closeGraph()" >&times;</a></p></div>
-      
-      <div class="navoverlaycontent">
-       <div id="graphnav" class="graph-containerng">
-        <div>
-          
-          <div class="containerng">
-            <svg width="100%" height="100%">
-              <defs>
-                <clipPath id="clip">
-                  <rect width="100%" height="100%"></rect>
-                </clipPath>
-              </defs>
-              <g id="graph" clip-path="url(#clip)"></g>
-            </svg>
-          </div>
-          <div class="tooltipng" id="tooltip"></div>
-        </div>
-      </div>
-      </div>
-    </aside>
-    -->
-    <!-- Modal -->
-    <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-           <p>Platzhalter</p>
-          </div>
-         
-        </div>
-      </div>
-    </div>
+   
+   
     
     <div class="site-section site-cover-2" style="margin-top: 7em; background-image: url('images/hero-min.jpg')">
       <div class="container">
