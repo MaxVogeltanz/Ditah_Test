@@ -31,7 +31,7 @@
   
   <title>Digitale Transformation der Österreichisches Geisteswissenschfaten</title>
   
-  
+  <script src="js/searchbar.js"></script>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.0/dist/leaflet.timedimension.min.js"></script>
@@ -200,14 +200,6 @@
              <!-- für unterseiten node graph
                <li  data-toggle="modal" data-target="#exampleModal"><!-\-<a href="#graphoverlay" id="showGraph" onclick="navGraph()">-\-><img src="images/node-plus.svg" alt="nodeicon"/><!-\-</a>-\-></li>
             -->  
-              <div class="container">
-                <h3>Suche</h3>
-                <div class="input-group mb-3">
-                  <input type="text" id="searchBox" class="form-control" placeholder="Suchbegriff eingeben..." aria-label="Search" style="border-color: #004567; border: solid 0.5px; border-radius: 3px;">
-                  <button class="btn-sm btn-outline-secondary" type="button" style="border-color: #004567; border: solid 0.5px;" onclick="search()">Suche</button>
-                </div>
-              </div>
-
             </ul>
            
             <a href="#" class="burger light ml-auto site-menu-toggle js-menu-toggle d-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
@@ -964,6 +956,6 @@ document.getElementById("helpOverlay").style.width = "0%";
   
 <!--  <script src="js/TemporalMap.js"></script>-->
   <script src="js/networkgraph.js"></script>
-  <script src="js/searchbar.js"></script>
+
   </body>
   </html>
