@@ -2163,3 +2163,11 @@ margin-left: 3.5em;
 .pillaricons {
     margin-top: -4em;
 }
+.btn-outline-secondary {
+            border-color: #004567;
+            border: solid 0.5px;
+        }
+.btn-outline-secondary:hover {
+            background-color: #004567; /* Highlighting color */
+            color: white; /* Optional: change text color */
+        }
