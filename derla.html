@@ -183,23 +183,6 @@
                     style="border-color: #004567; border: solid 0.5px;" onclick="search()"
                     >Suche</button>
                 </div>
-                <!-- Modal for search bar, opens when search button is clicked-->
-                <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="resultsModalLabel">Suchergebnisse</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body" id="results"></div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #004567">Schließen</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </li>
             </ul>
             <a href="#"
@@ -211,7 +194,23 @@
         </div>
       </nav>
       <!-- END nav -->
-
+      <!-- Modal for search bar, opens when search button is clicked-->
+      <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="resultsModalLabel">Suchergebnisse</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="results"></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #004567">Schließen</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- END container  end nav-->
