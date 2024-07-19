@@ -11,7 +11,7 @@ fetch('searchindex.json')
 let idx;
 
 function normalizeString(str) {
-  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  return str.normalize('NFD');
 }
 
 function initializeLunr() {
