@@ -162,6 +162,16 @@
               <li class="active">
                 <a href="about.html">About</a>
               </li>
+              <li>
+                <div class="input-group mb-3">
+                  <input type="text" id="searchBox" class="form-control-sm"
+                    placeholder="Suchbegriff eingeben..." aria-label="Search"
+                    style="border-color: #004567 !important; border: solid 0.5px; border-radius: 3px;">
+                  <button class="btn-sm btn-outline-secondary" type="button"
+                    style="border-color: #004567 !important; border: solid 0.5px;" onclick="search()"
+                    >Suche</button>
+                </div>
+              </li>
               <li data-toggle="modal" data-target="#exampleModal">
                 <!--<a href="#graphoverlay" id="showGraph" onclick="navGraph()">-->
                 <img src="images/node-plus.svg" alt="nodeicon" />
@@ -181,16 +191,7 @@
       </nav>
       <!-- END nav -->
     </div>
-    <div class="site-section">
-      <div class="input-group mb-3">
-        <input type="text" id="searchBox" class="form-control-sm"
-          placeholder="Suchbegriff eingeben..." aria-label="Search"
-          style="border-color: #004567 !important; border: solid 0.5px; border-radius: 3px;">
-        <button class="btn-sm btn-outline-secondary" type="button"
-          style="border-color: #004567 !important; border: solid 0.5px;" onclick="search()"
-          >Suche</button>
-      </div>
-    </div>
+
 
     <!-- END container  end nav-->
     <!-- side nav-->
