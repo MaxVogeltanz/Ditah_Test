@@ -12,9 +12,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&amp;display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.0/dist/leaflet.timedimension.control.min.css" />
-    
+   
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -25,16 +23,12 @@
     <link rel="stylesheet" href="css/aos.css">
     
     
-    <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
     
     
     <title>Nutzerzentrierte Zugänge zum digitalen österreichischen Kulturerbe</title>
     
     
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.0/dist/leaflet.timedimension.min.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     
       
@@ -441,187 +435,7 @@
     </div>
     
     
-    <script>
-function navMap() {
-  document.getElementById("mapoverlay").style.width = "100%";
-}
-
-function closeMap() {
-  document.getElementById("mapoverlay").style.width = "0%";
-}
-
-function navGraph() {
-  document.getElementById("graphoverlay").style.width = "100%";
-}
-
-function closeGraph() {
-  document.getElementById("graphoverlay").style.width = "0%";
-}
-</script>
-   <!-- <script>
-  document.getElementById('showGraph').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default link behavior
-    document.getElementById('graphoverlay').style.display = 'block';
-  });
-</script>-->
-   <!-- <script>
-  document.getElementById('showMap').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default link behavior
-    document.getElementById('mapoverlay').style.display = 'block';
-  });
-</script>-->
-    <script>
-        const nodes = [
-            { id: "home.html", name: "Home", color: "#004567" },
-            { id: "projektsubpagetemplate2.html", name: "Methoden&Tools", color: "#672200" },
-            { id: "gallery.html", name: "M3R", color: "#006756" },
-            { id: "projektsubpagetemplate.html", name: "Projekttemplate", color: "#001267" }
-        ];
-
-        const links = [
-            { source: "home.html", target: "gallery.html" },
-            { source: "gallery.html", target: "projektsubpagetemplate.html" },
-             { source: "projektsubpagetemplate.html", target: "projektsubpagetemplate2.html" },
-            { source: "gallery.html", target: "projektsubpagetemplate2.html" },
-             { source: "home.html", target: "projektsubpagetemplate2.html" }
-        ];
-
-        const container = d3.select('.containerng');
-        const width = container.node().offsetWidth;
-        const height = container.node().offsetHeight;
-
-        const svg = d3.select("svg")
-            .attr("viewBox", `0 0 ${width} ${height}`)
-            .attr("preserveAspectRatio", "xMidYMid meet");
-
-        const graph = svg.select("#graph");
-
-        const color = d3.scaleOrdinal(d3.schemeCategory10);
-
-        // Calculate radius based on text width
-        function calculateRadius() {
-            const tempText = svg.append("text")
-                .attr("class", "temp-textng")
-                .style("font", "12px sans-serif")
-                .style("visibility", "hidden");
-
-            nodes.forEach(node => {
-                tempText.text(node.name);
-                const bbox = tempText.node().getBBox();
-                node.radius = bbox.width / 2 + 10;  // Add some padding
-            });
-
-            tempText.remove();
-        }
-
-        calculateRadius();
-
-        const linkDistance = d => d.source.radius + d.target.radius + 20;
-
-        const simulation = d3.forceSimulation(nodes)
-            .force("link", d3.forceLink(links).id(d => d.id).distance(linkDistance))
-            .force("charge", d3.forceManyBody().strength(-1000))
-            .force("center", d3.forceCenter(width / 2, height / 2))
-            .force("collide", d3.forceCollide().radius(d => d.radius + 5));
-
-        const tooltip = d3.select("#tooltip");
-
-        function createLinks() {
-            graph.append("g")
-                .attr("class", "linksng")
-                .selectAll("line")
-                .data(links)
-                .enter().append("line")
-                .attr("class", "linkng");
-        }
-
-        function createNodes() {
-            const nodeGroup = graph.append("g")
-                .attr("class", "nodesng")
-                .selectAll("g")
-                .data(nodes)
-                .enter().append("g")
-                .attr("class", "nodeng")
-                .on("click", (event, d) => {
-                    window.open(d.id, '_blank');
-                })
-                .on("mouseover", (event, d) => {
-                    tooltip.style("opacity", 1)
-                        .html(d.name)
-                        .style("left", `${event.pageX + 5}px`)
-                        .style("top", `${event.pageY + 5}px`);
-                })
-                .on("mousemove", (event, d) => {
-                    tooltip.style("left", `${event.pageX + 5}px`)
-                        .style("top", `${event.pageY + 5}px`);
-                })
-                .on("mouseout", () => {
-                    tooltip.style("opacity", 0);
-                })
-                .call(d3.drag()
-                    .on("start", dragstarted)
-                    .on("drag", dragged)
-                    .on("end", dragended));
-
-            nodeGroup.append("circle")
-                .attr("r", d => d.radius)
-                .attr("fill", d => d.color); // Use the color property
-
-            nodeGroup.append("text")
-                .attr("dy", 3)
-                .attr("text-anchor", "middle")
-                .text(d => d.name);
-        }
-
-        function ticked() {
-            graph.selectAll(".linkng")
-                .attr("x1", d => d.source.x)
-                .attr("y1", d => d.source.y)
-                .attr("x2", d => d.target.x)
-                .attr("y2", d => d.target.y);
-
-            graph.selectAll(".nodeng")
-                .attr("transform", d => {
-                    // Keep nodes within the container bounds
-                    d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
-                    d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
-                    return `translate(${d.x},${d.y})`;
-                });
-        }
-
-        function dragstarted(event, d) {
-            if (!event.active) simulation.alphaTarget(0.3).restart();
-            d.fx = d.x;
-            d.fy = d.y;
-        }
-
-        function dragged(event, d) {
-            d.fx = event.x;
-            d.fy = event.y;
-        }
-
-        function dragended(event, d) {
-            if (!event.active) simulation.alphaTarget(0);
-            d.fx = null;
-            d.fy = null;
-        }
-
-        function applyZoomAndPan() {
-            const zoom = d3.zoom()
-                .scaleExtent([0.5, 3])
-                .on('zoom', (event) => {
-                    graph.attr('transform', event.transform);
-                });
-
-            svg.call(zoom);
-        }
-
-        createLinks();
-        createNodes();
-        simulation.nodes(nodes).on("tick", ticked);
-        simulation.force("link").links(links);
-        applyZoomAndPan();
-        </script>
+  
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
     <script src="js/popper.min.js"></script>
