@@ -61,7 +61,4 @@ document.addEventListener('DOMContentLoaded', function() {
             search();
         }
     });
-
-    // Add event listener for the search button
-    document.querySelector('.btn-sm.btn-outline-secondary').addEventListener('click', search);
 });
