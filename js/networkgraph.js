@@ -30,7 +30,7 @@
             { id: "gipse.html", name: "GIPSE", category: "Projekte", year: 2024, color: "#006600", clickable: true},
             { id: "digi16.html", name: "DIGI 16", category: "Projekte", year: 2024, color: "#006600", clickable: true},
             { id: "m3r.html", name: "M3R", category: "Projekte", category2: "MethodenTools", year: 2022, color: "#006600", clickable: true},
-            { id: "patrimonium.html", name: "PATRIMONIUM", category: "Projekte", category2: "MethodenTools", year: 2023, color: "#006600", clickable: true},
+            { id: "dome.html", name: "RTI Dome", category: "Projekte", category2: "MethodenTools", year: 2024, color: "#006600", clickable: true},
             { id: "onbkulturerbe.html", name: "Kulturerbe", category: "Projekte", year: 2023, color: "#006600", clickable: true},
             { id: "textvsvisual.html", name: "Text vs Visual", category: "Projekte", year: 2023, color: "#006600", clickable: true},
             { id: "holzmeister.html", name: "Holzmeister", category: "Projekte", year: 2023, color: "#006600", clickable: true},
@@ -59,6 +59,7 @@
             { source: "Infra", target: "ficker.html" },
             { source: "Infra", target: "digi16.html" },
             { source: "Infra", target: "pez.html" },
+            { source: "Infra", target: "dome.html" },
             
             { source: "Methoden", target: "Wissenstransfer" },
             
@@ -67,13 +68,13 @@
             { source: "Methoden", target: "gipse.html" },
             { source: "Methoden", target: "hps.html" },
             { source: "Methoden", target: "m3r.html" },
-            { source: "Methoden", target: "patrimonium.html" },
             { source: "Methoden", target: "fercan.html" },
             { source: "Methoden", target: "derla.html" },
             { source: "Methoden", target: "onbkulturerbe.html" },
             { source: "Methoden", target: "rnab.html" },
             { source: "Methoden", target: "fotodatenbank.html" },
             { source: "Methoden", target: "digi16.html" },
+            { source: "Methoden", target: "dome.html" },
             
             { source: "Wissenstransfer", target: "derla.html" },
             { source: "Wissenstransfer", target: "dhplus.html" },
@@ -94,8 +95,8 @@
             { source: "partner.html#ug", target: "hps.html" },
             { source: "partner.html#ug", target: "gipse.html" },
             { source: "partner.html#ug", target: "fercan.html" },
+            { source: "partner.html#ug", target: "dome.html" },
             { source: "partner.html#ug", target: "digi16.html" },
-            { source: "partner.html#ug", target: "patrimonium.html" },
             { source: "partner.html#ug", target: "textvsvisual.html" },
             { source: "partner.html#ui", target: "ficker.html" },
             { source: "partner.html#ui", target: "holzmeister.html" },
@@ -123,7 +124,6 @@
             { source: "partner.html#tuw", target: "m3r.html" },
             { source: "partner.html#krems", target: "m3r.html" },
             
-            { source: "patrimonium.html", target: "fercan.html" },
             { source: "m3r.html", target: "partner.html#uw" },
 
         ];
