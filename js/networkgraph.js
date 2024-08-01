@@ -300,25 +300,25 @@ function updateGraph() {
                               (node.category === "Wissenstransfer" && showWissenstransfer);
 
         const category2Match = (node.category2 === "MethodenTools" && showMethodenTools) || 
-                               (node.category2 === "Infrastruktur" && showMethodenTools) ||
+                               (node.category2 === "Infrastruktur" && showInfrastruktur) ||
                                (node.category2 === "Organisationen" && showOrganisationen) || 
                                (node.category2 === "Projekte" && showProjekte) || 
                                (node.category2 === "Wissenstransfer" && showWissenstransfer);
                                
         const category3Match = (node.category3 === "MethodenTools" && showMethodenTools) || 
-                               (node.category3 === "Infrastruktur" && showMethodenTools) ||
+                               (node.category3 === "Infrastruktur" && showInfrastruktur) ||
                                (node.category3 === "Organisationen" && showOrganisationen) || 
                                (node.category3 === "Projekte" && showProjekte) || 
                                (node.category3 === "Wissenstransfer" && showWissenstransfer);
                                
         const category4Match = (node.category4 === "MethodenTools" && showMethodenTools) || 
-                               (node.category4 === "Infrastruktur" && showMethodenTools) ||
+                               (node.category4 === "Infrastruktur" && showInfrastruktur) ||
                                (node.category4 === "Organisationen" && showOrganisationen) || 
                                (node.category4 === "Projekte" && showProjekte) || 
                                (node.category4 === "Wissenstransfer" && showWissenstransfer);
         
         const category5Match = (node.category5 === "MethodenTools" && showMethodenTools) || 
-                               (node.category5 === "Infrastruktur" && showMethodenTools) ||
+                               (node.category5 === "Infrastruktur" && showInfrastruktur) ||
                                (node.category5 === "Organisationen" && showOrganisationen) || 
                                (node.category5 === "Projekte" && showProjekte) || 
                                (node.category5 === "Wissenstransfer" && showWissenstransfer);
