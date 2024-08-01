@@ -11,7 +11,7 @@
             { id: "partner.html#ui", name: "Uni Innsbruck", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
             { id: "partner.html#ug", name: "Uni Graz", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
             { id: "partner.html#plus", name: "PLUS", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
-            { id: "cima.html", name: "CIMA", category: "Organisationen", year: 2020, color: "#660066" },
+            { id: "cima.html", name: "CIMA", category: "Organisationen", year: 2023, color: "#660066" },
             { id: "partner.html#abk", name: "ABK", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
             { id: "partner.html#krems", name: "UWK", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
             { id: "partner.html#uw", name: "Uni Wien", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
@@ -23,23 +23,25 @@
             { id: "https://phaidra.univie.ac.at", name: "PHAIDRA", category: "Infrastruktur", year: 2020, color: "#666600", clickable: true},
             
             /*project nodes*/
-            { id: "fercan.html", name: "FERCAN", category: "Projekte", year: 2022, color: "#006600", clickable: true},
-            { id: "derla.html", name: "DERLA", category: "Projekte", category2: "MethodenTools", year: 2022, color: "#006600", clickable: true},
-            { id: "ficker.html", name: "Ficker-Edition", category: "Projekte", year: 2024, color: "#006600", clickable: true},
-            { id: "hps.html", name: "HPS", category: "Projekte", year: 2023, color: "#006600", clickable: true},
-            { id: "gipse.html", name: "GIPSE", category: "Projekte", year: 2024, color: "#006600", clickable: true},
-            { id: "digi16.html", name: "DIGI 16", category: "Projekte", year: 2024, color: "#006600", clickable: true},
-            { id: "m3r.html", name: "M3R", category: "Projekte", category2: "MethodenTools", year: 2022, color: "#006600", clickable: true},
-            { id: "dome.html", name: "RTI Dome", category: "Projekte", category2: "MethodenTools", year: 2024, color: "#006600", clickable: true},
-            { id: "onbkulturerbe.html", name: "Kulturerbe", category: "Projekte", year: 2023, color: "#006600", clickable: true},
+            { id: "fercan.html", name: "FERCAN", category: "Projekte", category2: "MethodenTools", year: 2022, color: "#006600", clickable: true},
+            { id: "derla.html", name: "DERLA", category: "Projekte", category2: "MethodenTools", category3: "Wissenstransfer", year: 2022, color: "#006600", clickable: true},
+            { id: "ficker.html", name: "Ficker-Edition", category: "Projekte", category2: "MethodenTools", category3: "Wissenstransfer", year: 2024, color: "#006600", clickable: true},
+            { id: "hps.html", name: "HPS", category: "Projekte", category2: "MethodenTools", year: 2023, color: "#006600", clickable: true},
+            { id: "gipse.html", name: "GIPSE", category: "Projekte", category2: "MethodenTools", year: 2024, color: "#006600", clickable: true},
+            { id: "digi16.html", name: "DIGI 16", category: "Projekte", category2: "MethodenTools", category3: "Wissenstransfer", year: 2024, color: "#006600", clickable: true},
+            { id: "m3r.html", name: "M3R", category: "Projekte", category2: "MethodenTools", year: 2024, color: "#006600", clickable: true},
+            { id: "dome.html", name: "RTI Dome", category: "Projekte", category2: "MethodenTools", year: 2023, color: "#006600", clickable: true},
+            { id: "onbkulturerbe.html", name: "Kulturerbe", category: "Projekte", category2: "MethodenTools", category3: "Wissenstransfer", category4: "Infrastruktur", year: 2023, color: "#006600", clickable: true},
             { id: "textvsvisual.html", name: "Text vs Visual", category: "Projekte", year: 2023, color: "#006600", clickable: true},
-            { id: "holzmeister.html", name: "Holzmeister", category: "Projekte", year: 2023, color: "#006600", clickable: true},
-            { id: "fotodatenbank.html", name: "Fotodatenbank", category: "Projekte", year: 2023, color: "#006600", clickable: true},
-            { id: "rnab.html", name: "RNAB", category: "Projekte", year: 2023, color: "#006600", clickable: true},
-            { id: "dhlehre.html", name: "DH Lehre", category: "Projekte", year: 2023, color: "#006600", clickable: true},
-            { id: "habsburg.html", name: "Habsburg", category: "Projekte", year: 2023, color: "#006600", clickable: true},
-            { id: "dhplus.html", name: "DH Plus", category: "Projekte", color: "#006600", clickable: true},
-            { id: "training.html", name: "training", category: "Projekte", color: "#006600", clickable: true},
+            { id: "holzmeister.html", name: "Holzmeister", category: "Projekte", category2: "MethodenTools", category3: "Infrastruktur", year: 2024, color: "#006600", clickable: true},
+            { id: "fotodatenbank.html", name: "Fotodatenbank", category: "Projekte", category2: "MethodenTools", category3: "Infrastruktur", year: 2024, color: "#006600", clickable: true},
+            { id: "rnab.html", name: "RNAB", category: "Projekte", category2: "MethodenTools", category3: "Infrastruktur", year: 2023, color: "#006600", clickable: true},
+            { id: "dhlehre.html", name: "DH Lehre", category: "Projekte", category2: "Wissenstransfer", year: 2023, color: "#006600", clickable: true},
+            { id: "habsburg.html", name: "Habsburg", category: "Projekte", category2: "Wissenstransfer", category3: "Infrastruktur", year: 2023, color: "#006600", clickable: true},
+            { id: "dhplus.html", name: "DH Plus", category: "Projekte", category2: "Wissenstransfer", year: 2023, color: "#006600", clickable: true},
+            { id: "training.html", name: "training", category: "Projekte", category2: "Wissenstransfer", year: 2022, color: "#006600", clickable: true},
+            { id: "pipelines.html", name: "Hybrid Pipelines", category: "Projekte", category2: "MethodenTools", year: 2024, color: "#006600", clickable: true},
+            { id: "repositoryeosc.html", name: "Repository-Discovery", category: "Projekte", category2: "Infrastruktur", year: 2024, color: "#006600", clickable: true},
 
         ];
 
@@ -56,6 +58,7 @@
             { source: "Infra", target: "ficker.html" },
             { source: "Infra", target: "digi16.html" },
             { source: "Infra", target: "dome.html" },
+            { source: "Infra", target: "repositoryeosc.html" },
             
             { source: "Methoden", target: "Wissenstransfer" },
             
@@ -71,6 +74,7 @@
             { source: "Methoden", target: "fotodatenbank.html" },
             { source: "Methoden", target: "digi16.html" },
             { source: "Methoden", target: "dome.html" },
+            { source: "Methoden", target: "pipelines.html" },
             
             { source: "Wissenstransfer", target: "derla.html" },
             { source: "Wissenstransfer", target: "dhplus.html" },
@@ -108,6 +112,8 @@
             { source: "partner.html#onb", target: "onbkulturerbe.html" },
             { source: "partner.html#plus", target: "dhplus.html" },
             { source: "partner.html#oaw", target: "training.html" },
+            { source: "partner.html#oaw", target: "pipelines.html" },
+            { source: "partner.html#oaw", target: "repositoryeosc.html" },
             
             { source: "partner.html#tuw", target: "m3r.html" },
             { source: "partner.html#krems", target: "m3r.html" },
@@ -279,34 +285,45 @@ function updateGraph() {
     const showInfrastruktur = d3.select("#filterInfrastruktur").property("checked");
     const showOrganisationen = d3.select("#filterOrganisationen").property("checked");
     const showProjekte = d3.select("#filterProjekte").property("checked");
+    const showWissenstransfer = d3.select("#filterWissenstransfer").property("checked");
     const timelineValue = +d3.select("#timeline").property("value");
 
     const filteredNodes = nodes.filter(node => {
         if (node.category === "Säule") return true; // Always show the three basic nodes with category "Säule"
 
-        // Apply the OR logic for category 1, 2, 3
-        // Every node can be inside up to 3 categories. depending on that checkbox filters will show or hide a node
+        // Apply the OR logic for category 1, 2, 3, 4, 5
+        // Every node can be inside up to 5 categories. depending on that checkbox filters will show or hide a node
         const categoryMatch = (node.category === "MethodenTools" && showMethodenTools) || 
                               (node.category === "Infrastruktur" && showInfrastruktur) ||
                               (node.category === "Organisationen" && showOrganisationen) || 
-                              (node.category === "Projekte" && showProjekte);
+                              (node.category === "Projekte" && showProjekte) || 
+                              (node.category === "Wissenstransfer" && showWissenstransfer);
 
         const category2Match = (node.category2 === "MethodenTools" && showMethodenTools) || 
                                (node.category2 === "Infrastruktur" && showMethodenTools) ||
                                (node.category2 === "Organisationen" && showOrganisationen) || 
-                               (node.category2 === "Projekte" && showProjekte);
+                               (node.category2 === "Projekte" && showProjekte) || 
+                               (node.category2 === "Wissenstransfer" && showWissenstransfer);
                                
         const category3Match = (node.category3 === "MethodenTools" && showMethodenTools) || 
                                (node.category3 === "Infrastruktur" && showMethodenTools) ||
                                (node.category3 === "Organisationen" && showOrganisationen) || 
-                               (node.category3 === "Projekte" && showProjekte);
+                               (node.category3 === "Projekte" && showProjekte) || 
+                               (node.category3 === "Wissenstransfer" && showWissenstransfer);
                                
         const category4Match = (node.category4 === "MethodenTools" && showMethodenTools) || 
                                (node.category4 === "Infrastruktur" && showMethodenTools) ||
                                (node.category4 === "Organisationen" && showOrganisationen) || 
-                               (node.category4 === "Projekte" && showProjekte);
+                               (node.category4 === "Projekte" && showProjekte) || 
+                               (node.category4 === "Wissenstransfer" && showWissenstransfer);
+        
+        const category5Match = (node.category5 === "MethodenTools" && showMethodenTools) || 
+                               (node.category5 === "Infrastruktur" && showMethodenTools) ||
+                               (node.category5 === "Organisationen" && showOrganisationen) || 
+                               (node.category5 === "Projekte" && showProjekte) || 
+                               (node.category5 === "Wissenstransfer" && showWissenstransfer);
 
-        if (!(categoryMatch || category2Match || category3Match || category4Match )) return false;
+        if (!(categoryMatch || category2Match || category3Match || category4Match || category5Match )) return false;
 
         if (node.year > timelineValue) return false;
 
@@ -332,8 +349,10 @@ function updateGraph() {
 
 d3.select("#filterMethodenTools").on("change", updateGraph);
 d3.select("#filterInfrastruktur").on("change", updateGraph);
+d3.select("#filterWissenstransfer").on("change", updateGraph);
 d3.select("#filterOrganisationen").on("change", updateGraph);
 d3.select("#filterProjekte").on("change", updateGraph);
+
 d3.select("#timeline").on("input", function() {
     d3.select("#timelineValue").text(this.value);
     updateGraph();
