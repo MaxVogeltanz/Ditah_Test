@@ -31,51 +31,10 @@
     
     <title>Digitale Transformation der Österreichisches Geisteswissenschfaten</title>
     
-    
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.0/dist/leaflet.timedimension.min.js"></script>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
       
-    <style>
-        .graph-containerng {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-           /* background: radial-gradient(#004567, #ffffff);*/
-            background-position: center;
-            background-size:cover;
-          /*  background-color: #f0f8ff;  Very light blue background color */
-        }
-        .containerng {
-        width: 150%;
-            height: 200%;
-          /*    background-position: center;
-            background-size:cover;*/
-            /*border: 1px solid #ddd;*/
-            position: relative;
-            overflow: hidden; /* Ensure anything outside the container is hidden */
-        }
-        .nodeng {
-            stroke: #fff;
-            stroke-width: 1.5px;
-        }
-        .linkng {
-            stroke: #999;
-            stroke-opacity: 0.6;
-        }
-        .tooltipng {
-            position: absolute;
-            padding: 5px;
-            background: white;
-            border: 1px solid #ccc;
-            pointer-events: none;
-            opacity: 0;
-        }
-        </style>
-    
+   
   </head>
   <body>
 
@@ -725,6 +684,6 @@ function closeGraph() {
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/custom.js"></script>
     
-    <script src="js/TemporalMap.js"></script>
+    <script src="js/searchbar.js"></script>
   </body>
   </html>

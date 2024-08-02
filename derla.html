@@ -120,10 +120,10 @@
               <li class="active">
                 <a href="about.html">About</a>
               </li>
-              <li data-toggle="modal" data-target="#exampleModal">
-                <!--<a href="#graphoverlay" id="showGraph" onclick="navGraph()">-->
+              <li>
+                <a href="index.html#about">
                 <img src="images/node-plus.svg" alt="nodeicon" />
-                <!--</a>-->
+                </a>
               </li>
             
             </ul>
@@ -168,53 +168,8 @@
         </div>
       </div>
     </div>
+   <!-- nav plus bis hier her in alle untersieten kopieren -->
    
-    <!-- Modal graph unterseiten-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-      aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div id="graphnav" class="graph-containerng col-9">
-                <div>
-                  <div class="containerng">
-                    <svg>
-                      <!--              <defs>
-                <clipPath id="clip">
-                  <rect width="100%" height="100%"></rect>
-                </clipPath>
-              </defs>-->
-                      <g id="graph" clip-path="url(#clip)"></g>
-                    </svg>
-                  </div>
-                  <div class="tooltipng" id="tooltip"></div>
-                </div></div>
-              <div class="col-3" style="color: black; border-left: 2px solid;">
-                <h3>Filter</h3>
-                <br/>
-                <p><input type="checkbox" id="filterMethodenTools" checked> Methoden und Tools</p>
-                <p><input type="checkbox" id="filterInfrastruktur" checked> Infrastruktur</p>
-                <p><input type="checkbox" id="filterOrganisationen" checked> Organisationen</p>
-                <p><input type="checkbox" id="filterProjekte" checked> Projekte</p>
-                <div>
-                  <label for="timeline">Timeline: </label>
-                  <input type="range" id="timeline" min="2020" max="2024" step="1" value="2024">
-                  <span id="timelineValue">2024</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
     <div class="site-section site-cover-2"
       style="margin-top: 7em; background-image: url('images/hero-min.jpg')">
       <div class="container">
@@ -297,34 +252,7 @@
             </div>
           </div>
           <div class="row grid">
-            <!--<div class="isotope-card col-sm-4 all mockup">
-              <a href="images/img_v_4-min.jpg" data-fancybox="gal">
-                <img src="images/img_v_4-min.jpg" alt="Image" class="img-fluid">
-                <div class="contents">
-                  <h3>Card Vol. 3</h3>
-                  <div class="cat">Mockup</div>
-                </div>
-              </a>
-            </div>
-
-            <div class="isotope-card col-sm-4 all mockup">
-              <a href="images/img_h_1-min.jpg" data-fancybox="gal">
-                <img src="images/img_h_1-min.jpg" alt="Image" class="img-fluid">
-                <div class="contents">
-                  <h3>Card Vol. 3</h3>
-                  <div class="cat">Mockup</div>
-                </div>
-              </a>
-            </div>
-            <div class="isotope-card col-sm-4 all mockup">
-              <a href="images/img_h_8-min.jpg" data-fancybox="gal">
-                <img src="images/img_h_8-min.jpg" alt="Image" class="img-fluid">
-                <div class="contents">
-                  <h3>Card Vol. 3</h3>
-                  <div class="cat">Mockup</div>
-                </div>
-              </a>
-            </div>-->
+           
             <div class="isotope-card col-sm-4 all links">
               <a href="https://www.erinnerungslandschaft.at" target="_blank">
                 <img src="images/projekte/DERLA.jpg" alt="Image" class="img-fluid">
@@ -596,22 +524,7 @@
         <span class="sr-only">Loading...</span>
       </div>
     </div>
-    <script>
-            function navMap() {
-                document.getElementById("mapoverlay").style.width = "100%";
-            }
-            
-            function closeMap() {
-                document.getElementById("mapoverlay").style.width = "0%";
-            }
-            
-            function navGraph() {
-                document.getElementById("graphoverlay").style.width = "100%";
-            }
-            
-            function closeGraph() {
-                document.getElementById("graphoverlay").style.width = "0%";
-            }</script>
+   
   
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>

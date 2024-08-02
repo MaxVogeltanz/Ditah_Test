@@ -29,7 +29,8 @@
     <title>Multimodale Repräsentation & Analyse von Manuskripten</title>
     
     
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
     
    
     <style>
@@ -44,46 +45,7 @@
       
       
         </style>
-    <style>
-        .graph-containerng {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-           /* background: radial-gradient(#004567, #ffffff);*/
-            background-position: center;
-            background-size:cover;
-          /*  background-color: #f0f8ff;  Very light blue background color */
-        }
-        .containerng {
-        width: 70vw;
-            height: 95vh ;
-          /*    background-position: center;
-            background-size:cover;*/
-            /*border: 1px solid #ddd;*/
-            position: relative;
-            overflow: hidden; /* Ensure anything outside the container is hidden */
-            font-size: 0.75em;
-        }
-        .nodeng {
-            stroke: #fff;
-            stroke-width: 1.5px;
-        }
-        .linkng {
-            stroke: #fff;
-            stroke-opacity: 0.6;
-        }
-        .tooltipng {
-            position: absolute;
-            padding: 5px;
-            background: white;
-            border: 1px solid #ccc;
-            pointer-events: none;
-            opacity: 0;
-        }
-
-        </style>
-    
+   
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="js/figure1.js"></script>
     <script>
@@ -198,7 +160,7 @@ function handleComplete(evt,comp) {
                 </ul>
               </li>
               <li class="active"><a href="about.html">About</a></li>
-              <li  data-toggle="modal" data-target="#exampleModal"><!--<a href="#graphoverlay" id="showGraph" onclick="navGraph()">--><img src="images/node-plus.svg" alt="nodeicon"/><!--</a>--></li>
+              <li ><!--<a href="#graphoverlay" id="showGraph" onclick="navGraph()">--><img src="images/node-plus.svg" alt="nodeicon"/></li>
             
               
             </ul>
@@ -563,8 +525,7 @@ function handleComplete(evt,comp) {
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/searchbar.js"></script>
     
-    <!--<script src="js/TemporalMap.js"></script>-->
-    <script src="js/networkgraph.js"></script>
   </body>
   </html>
