@@ -22,49 +22,10 @@
   
     <link rel="stylesheet" href="css/style.css">
     <title>Digitale Transformation der Österreichisches Geisteswissenschfaten</title>
-    <script src="js/searchbar.js"></script>
- 
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
-    <style>
-      .graph-containerng {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          /* background: radial-gradient(#004567, #ffffff);*/
-          background-position: center;
-          background-size: cover;
-          /*  background-color: #f0f8ff;  Very light blue background color */
-      }
-      .containerng {
-          width: 70vw;
-          height: 95vh;
-          /*    background-position: center;
-            background-size:cover;*/
-          /*border: 1px solid #ddd;*/
-          position: relative;
-          overflow: hidden; /* Ensure anything outside the container is hidden */
-          font-size: 0.75em;
-      }
-      .nodeng {
-          stroke: #fff;
-          stroke-width: 1.5px;
-      }
-      .linkng {
-          stroke: #fff;
-          stroke-opacity: 0.6;
-      }
-      .tooltipng {
-          position: absolute;
-          padding: 5px;
-          background: white;
-          border: 1px solid #ccc;
-          pointer-events: none;
-          opacity: 0;
-      }
-    </style>
-  </head>
+  
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    
+    </head>
   <body>
     <!-- nav start -->
     <div class="site-mobile-menu site-navbar-target sticky-top">
@@ -651,18 +612,7 @@
             function closeGraph() {
                 document.getElementById("graphoverlay").style.width = "0%";
             }</script>
-    <!-- <script>
-  document.getElementById('showGraph').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default link behavior
-    document.getElementById('graphoverlay').style.display = 'block';
-  });
-</script>-->
-    <!-- <script>
-  document.getElementById('showMap').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default link behavior
-    document.getElementById('mapoverlay').style.display = 'block';
-  });
-</script>-->
+  
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -676,9 +626,7 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/custom.js"></script>
-    <!--
-    <script src="js/TemporalMap.js"></script>-->
-    <script src="js/networkgraph.js"></script>
-    
+   
+    <script src="js/searchbar.js"></script>
   </body>
 </html>
