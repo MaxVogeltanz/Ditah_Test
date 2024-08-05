@@ -41,7 +41,8 @@
             { id: "dhplus.html", name: "DH Plus", category: "Projekte", category2: "Wissenstransfer", year: 2023, color: "#006600", clickable: true},
             { id: "training.html", name: "training", category: "Projekte", category2: "Wissenstransfer", year: 2022, color: "#006600", clickable: true},
             { id: "eosc.html", name: "EOSC", category: "Projekte", category2: "MethodenTools", year: 2024, color: "#006600", clickable: true},
-            { id: "repositorypipelines.html", name: "Repositories & Pipelines", category: "Projekte", category2: "Infrastruktur", year: 2024, color: "#006600", clickable: true},
+            { id: "pipelines.html", name: "Hybrid Pipelines", category: "Projekte", category2: "Infrastruktur", year: 2024, color: "#006600", clickable: true},
+            { id: "repository.html", name: "Repository-Discovery", category: "Projekte", category2: "Infrastruktur", year: 2024, color: "#006600", clickable: true},
 
         ];
 
@@ -58,7 +59,8 @@
             { source: "Infra", target: "ficker.html" },
             { source: "Infra", target: "digi16.html" },
             { source: "Infra", target: "dome.html" },
-            { source: "Infra", target: "repositorypipelines.html" },
+            { source: "Infra", target: "repository.html" },
+            { source: "Infra", target: "pipelines.html" },
             
             { source: "Methoden", target: "Wissenstransfer" },
             
@@ -113,7 +115,8 @@
             { source: "partner.html#plus", target: "dhplus.html" },
             { source: "partner.html#oaw", target: "training.html" },
             { source: "partner.html#oaw", target: "eosc.html" },
-            { source: "partner.html#oaw", target: "repositorypipelines.html" },
+            { source: "partner.html#oaw", target: "repository.html" },
+            { source: "partner.html#oaw", target: "pipelines.html" },
             
             { source: "partner.html#tuw", target: "m3r.html" },
             { source: "partner.html#krems", target: "m3r.html" },
