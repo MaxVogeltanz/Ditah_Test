@@ -22,16 +22,17 @@
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/aos.css">
     
+    
     <link rel="stylesheet" href="css/style.css">
     
     
-    <title>Phaidra</title>
+    <title>EOSC</title>
     
-   
+ 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
     
     
-   
+      
    
   </head>
   <body>
@@ -117,14 +118,15 @@
       
     </div> 
     <!-- END container  end nav-->
-   
-  
+    <!-- side nav-->
+    
+    
     
     <div class="site-section site-cover-2" style="margin-top: 7em; background-image: url('images/hero-min.jpg')">
       <div class="container">
         <div class="row">
           <div class="col-lg-7 mx-auto text-center">
-            <h2 class="text-white mb-4">Phaidra - mūsēum: an easy to use proxy server, orchestrator and serverless runtime for your web applications
+            <h2 class="text-white mb-4">EOSC
             </h2>
            </div>
         </div>
@@ -139,53 +141,102 @@
             <li class="active" data-filter="*">Übersicht</li>
             <li data-filter=".beschreibung">Beschreibung</li><!-- packaging -->
            
-            <li data-filter=".links">GitHub</li>
-          
+            <li data-filter=".eosc">Deliverables</li>
             <li data-filter=".kontakt">Kontakt</li>
+           
           </ul>
         </div>
+     
         <div class="filters-content mb-5" data-aos="fade-up" data-aos-delay="200">
         <div class="row grid">
            <div class="col-6 all beschreibung">
-             <p>Diese Ressource ist ein Wegweiser zu geografischen Informationssystemen (GIS), der durch eine Zusammenarbeit mit Liam Downs-Tepper inspiriert und von Emily Genatowski von der Universität Wien auf Dariah Campus zusammengestellt wurde. </p>
-             <p>mūsēum speichert Informationen zu laufenden Applikationen via etcd. Bei einer Anfrage kontrolliert mūsēum, ob die Anwendung im Docker Swarm läuft; wenn ja, wird die Anfrage weitergeleitet. Wenn nicht, wird ein Ladebildschirm erzeugt, um die Applikation zu starten.</p>
-          
+             <p><i>“The ambition of the European Open Science Cloud (EOSC) is to develop ‘Web of FAIR Data and services’ for science in Europe. EOSC will be a multi-disciplinary environment where researchers can publish, find and re-use data, tools and services, enabling them to better conduct their work.”
+             </i> <a href="https://eosc.eu/about-eosc" target="_blank">https://eosc.eu/about-eosc</a></p>
+             <p>Das Teilprojekt bzw. Arbeitspaket “EOSC” am ACDH-CH zielt darauf ab, die Integration der Initiative EOSC (European Open Science Cloud) und der österreichischen DH-Forschung voranzutreiben, dabei das Angebot und die Ergebnisse von EOSC in der österreichischen DH-Forschungslandschaft bestmöglich zu nutzen, sowie die Anknüpfung, Vernetzung und den Austausch mit der Vielzahl an beteiligten Akteuren im europäischen Raum zu fördern.
+             </p>
+             <p>Auf technischer Ebene bedeutet Integration in dieser Phase insbesondere die Dissemination österreichischer Forschungsoutputs durch zentrale europäische Metadaten-Kataloge, allen voran OpenAIRE (Open Access Infrastructure for Research in Europe), um eine bessere Sicht- und Durchsuchbarkeit dieser Daten sicherzustellen. Diese ist eine Voraussetzung für das Teilen und die Nutzung von Daten und Services im gesamten europäischen Forschungsraum. Zu diesem Zweck wurden die Repositories ARCHE und GAMS mit OpenAIRE integriert (on-boarding), d.h. ihre Metadaten werden geharvested und können so als Teil des gesamten OpenAIRE Research Graph exploriert/erschlossen werden. Zusätzlich wurden sie registriert als Teil des DARIAH Community Gateway’s, so dass die Ressourcen aus diesen Repositorien als Teil von DARIAH Resources gelten. Dank seines Engagements in den Projekten EOSC Future und SSHOC konnte sich das ACDH-CH Team ideal positionieren, um die aktuellen Entwicklungen auf europäischer Ebene zu beobachten und auf nationaler und institutioneller Ebene zu vermitteln, bzw. einzusetzen.
+             </p>
+             <p>Aktueller Stand: Die Situation bzgl. weiterer Entwicklung von EOSC ist nach dem Ende des EOSC-Future Projektes sehr volatil. Im Rahmen von <a href="https://digital-strategy.ec.europa.eu/en/news/commission-announces-winners-eosc-procurement" target="_blank">Procurements</a> wurden neue Betreiber für den Betrieb von zentralen Komponenten der EOSC-Infrastruktur ausgelobt, derzeit gibt es jedoch keine stabilen zentralen Services, bzw. klare Vorgaben zur Integration von lokalen, thematischen oder nationalen Services und Strukturen.  Im Herbst 2024 soll im Rahmen des EOSC Symposiums die neue EOSC EU Node vorgestellt werden, welche zentrale Services bereitstellen wird.
+             </p>
+             <p>In enger Absprache mit DARIAH, liegt daher der Fokus auf Integration von Services mit OpenAIRE und SSH Open Marketplace, in der Annahme, dass diese Systeme jedenfalls eine Rolle, 
+               in der sich derzeit neugestaltenden technischen Struktur von EOSC spielen werden.  
+               Das DiTAH-Teilprojekt “Repositorien-Discovery” hat sich in diesem Zusammenhang intensiv mit OpenAIRE und den damit verbundenen Möglichkeiten auseinandergesetzt.
+           </p>
+             <p>Eine wichtige Rolle werden in diesem Kontext die neuen Infrastruktur-Projekte: <a href="https://atrium-research.eu/" target="_blank">ATRIUM</a>, 
+               <a href="https://oscars-project.eu/" target="_blank">OSCARS</a>, <a href="https://ostrails.eu/" target="_blank">OS Trails</a>, <a href="https://echoes-project.eu/" target="_blank">ECHOES</a>, in denen DARIAH und tlw. auch das ACDH-CH involviert sind.
+               Der veröffentlichte Bericht vom Oktober 2023 informiert über die Entwicklungen bei EOSC auf europäischer, sowie nationaler Ebene. ACDH-CH als affiliated entity von DARIAH im EOSC Future Projekt, 
+               war auch am Deliverables D6.2b zu "<i>Workflows developed from the Moderation Process to Onboard External Providers</i>" beteiligt.
+             </p>
+             <p>Bis zum Ende des Projektes soll des Weiteren ein White Paper erstellt werden, welches die neuesten Entwicklungen sowie die aktuelle Situation zusammenfasst und Vorschläge für die Integration von DH-Aktivitäten in Österreich mit EOSC liefert.
+             </p>
            </div>
-             
-             <div class="isotope-card col-sm-4 all links">
-               <a href="https://github.com/Azer0s/museum/ " target="_blank">
-                 <img src="images/projekte/museum.png" alt="Image" class="img-fluid">
-                 <div class="contents">
-                   <h3>mūsēum auf GitHub</h3>
-                   
-                 </div>
-               </a>
-             </div> 
-            
-         
+          
+            <div class="col-6 all beschreibung">
+              <p><img src="images/projekte/EOSC_logo.jpg" alt="eosc" class="img-fluid"/></p>
+            </div>
+         </div>
        
-        </div>
        
           <div class="row grid">
-           
-             
-            
-
-            
+          
+            <div class="isotope-card col-sm-4 all eosc">
+              <a href="https://doi.org/10.5281/zenodo.12820414" target="_blank">
+                <img src="images/projekte/museum.png" alt="Image" class="img-fluid">
+                <div class="contents">
+                  <h3>EOSC Update (2023-10)</h3>
+                  
+                </div>
+              </a>
+            </div> 
+            <div class="isotope-card col-sm-4 all eosc">
+              <a href="https://eoscfuture.eu/wp-content/uploads/2024/03/EOSC-Future-WP6-DARIAH-D6.2b-Workflows-to-Onboard-External-Providers-2023-11-06.pdf" target="_blank">
+                <img src="images/projekte/museum.png" alt="Image" class="img-fluid">
+                <div class="contents">
+                  <h3>Chambers, S., Barbot, L., Ďurčo, M., Illmayer, K., Kálmán, T., Pawałowski, P. (2023, November 06). EOSC Future D6.2b Workflows developed from the Moderation Process to Onboard External Providers.</h3>
+                  
+                </div>
+              </a>
+            </div> 
+            <div class="isotope-card col-sm-4 all eosc">
+              <a href="https://dariah.openaire.eu/search/find/dataproviders" target="_blank">
+                <img src="images/projekte/museum.png" alt="Image" class="img-fluid">
+                <div class="contents">
+                  <h3>ARCHE und GAMS in OpenAIRE und als Teil des DARIAH Community Gateway:
+                  </h3>
+                  
+                </div>
+              </a>
+            </div> 
+            <div class="isotope-card col-sm-4 all eosc">
+              <a href="https://doi.org/10.5281/zenodo.12783384" target="_blank">
+                <img src="images/projekte/museum.png" alt="Image" class="img-fluid">
+                <div class="contents">
+                  <h3>OpenAIRE analysis</h3>
+                  
+                </div>
+              </a>
+            </div> 
+         
             <div class="isotope-card col-sm-4 all kontakt">
-              <a href="mailto:ariel.simulevski@univie.ac.at">
+              <a href="mailto:Matej.Durco@oeaw.ac.at">
                 <img src="images/projekte/kontakt.png" alt="Image" class="img-fluid">
                 <div class="contents">
                   <h3>Kontakt: </h3>
-                  <div class="cat"><p>ariel.simulevski@univie.ac.at </p></div>
+                  <div class="cat"><p>Matej Ďurčo</p>
+                    <p>Matej.Durco@oeaw.ac.at</p></div>
+                  
                 </div>
               </a>
             </div>
+            
+           
+            
           </div>
-        </div>
+         
+          
+           </div>
       </div>
     </div>
-   
     <!-- .untrtee_co-section -->
         
 
@@ -343,8 +394,7 @@
       </div>
     </div>
     
-    
-   
+  
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
     <script src="js/popper.min.js"></script>
