@@ -82,6 +82,7 @@
   <div>
    
     <p><a href="#helpOverlay" id="showOverlay" onclick="openOverlay()"> <img src="images/infobutton.png" alt="information"/></a></p>
+    <p><a href="#videoOverlay" id="showVOverlay" onclick="openVOverlay()"> <img src="images/video.png" alt="information"/></a></p>
   </div>
 </aside>
   
@@ -91,6 +92,13 @@
     <div class="helpoverlaycontent">
     <p>text</p>
    </div>
+  </aside>
+  <aside id="videoOverlay" class="helpoverlay">
+    <div><p><a href="javascript:void(0)" class="helpclosebtn" onclick="closeOverlay()" >&times;</a></p></div>
+    
+    <div class="helpoverlaycontent">
+      <p>text</p>
+    </div>
   </aside>
 
   
@@ -303,10 +311,15 @@
         </div>
         <div class="col-lg-6 section-title" data-aos="fade-up" data-aos-delay="100">
           <div class="mb-4">
-            <h2 class="font-weight-bold mb-4">Titel?</h2>
-            <p class="mb-4">kürzerer text</p>
-           <!-- <p><a href="#" class="btn btn-primary">Get Started</a></p>-->
-          </div>
+            <h2 class="font-weight-bold mb-4">Die Digitalisierung der Geisteswissenschaften in Österreich</h2>
+            <p class="mb-4">Das Verbundprojekt DiTAH hat wesentlich und nachhaltig zur Etablierung der Digital Humanities in den Geisteswissenschaften in Österreich beigetragen. 
+              Ziel des Projekts war es, bestehende Infrastrukturen zu vereinheitlichen und miteinander zu integrieren, 
+              Ansätze und Methoden für Forscher:innen der gesamten Geisteswissenschaften aufzubereiten und zugänglich zu machen 
+              und schließlich die vielfältigen Aktivitäten und Ergebnisse aus dem Projekt zu kommunizieren 
+              und nachhaltig zugänglich zu machen. Damit richten sich die Ergebnisse von DiTAH an interessierte Geisteswissenschafter:innen, 
+              die Methoden der DH in ihre Forschung integrieren, an Studierende österreichischer Hochschulen, die ihre Ausbildung um relevante Aspekte digitaler 
+              Forschung erweitern sowie auch an ein interessiertes Laienpublikum, das von den Möglichkeiten digitaler Ansätze überzeugt werden will.</p>
+           </div>
           
         </div>
         
@@ -922,6 +935,13 @@ document.getElementById("helpOverlay").style.width = "70%";
 
 function closeOverlay() {
 document.getElementById("helpOverlay").style.width = "0%";
+}
+function openVOverlay() {
+document.getElementById("videoOverlay").style.width = "70%";
+}
+
+function closeVOverlay() {
+document.getElementById("videoOverlay").style.width = "0%";
 }
   </script>
   
