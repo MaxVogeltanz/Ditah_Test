@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="favicon.png">
+    
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/feather/style.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    
+    <title>Repository-Discovery</title>
+    
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    
+   
+  </head>
+  <body>
+
+    <!-- nav start -->
+    <div class="site-mobile-menu site-navbar-target sticky-top">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+    <div class="container sticky-top">
+      
+      
+      <nav class="site-nav sticky-top">
+        <div class="logo">
+          <a href="index.html" class="text-white ml-5"><img src="images/DiTAH_Logo_blau-01.svg" alt="Ditah Logo" width="200"/></a>
+       
+        </div>
+        <div class="row align-items-center">
+          
+          
+          <div class="col-12 col-sm-12 col-lg-12 site-navigation text-center">
+            <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu">
+              <li><a href="index.html">Home</a></li>
+              <li class="has-children">
+                <a href="#">Partner</a>
+                <ul class="dropdown">
+                  <li><a href="projekttemplate.html">template</a></li>
+                  <li><a href="projekttemplate.html">template</a></li>
+                  <li><a href="projekttemplate.html">template</a></li>
+                  <li><a href="projekttemplate.html">template</a></li>
+                  
+                  <li class="has-children">
+                    <a href="#">CIMA</a>
+                    <ul class="dropdown">
+                      <li><a href="#">Sub Menu One</a></li>
+                      <li><a href="#">Sub Menu Two</a></li>
+                      <li><a href="#">Sub Menu Three</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Narrative?</a></li>
+                </ul>
+              </li>
+              
+              <li class="has-children">
+                <a class="active" href="#">Projekte</a>
+                <ul class="dropdown">
+                  <li><a href="projekttemplate.html">template</a></li>
+                  <li><a href="projekttemplate.html">template</a></li>
+                  <li><a href="projekttemplate.html">template</a></li>
+                  <li><a href="projekttemplate.html">template</a></li>
+                  
+                  <li class="has-children">
+                    <a href="#">CIMA</a>
+                    <ul class="dropdown">
+                      <li><a href="#">Sub Menu One</a></li>
+                      <li><a href="#">Sub Menu Two</a></li>
+                      <li><a href="#">Sub Menu Three</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Narrative?</a></li>
+                </ul>
+              </li>
+              <li class="active"><a href="about.html">About</a></li>
+              <li><a href="#graphoverlay" id="showGraph" onclick="navGraph()"><img src="images/node-plus.svg" alt="nodeicon"/></a></li>
+            </ul>
+            
+            
+            
+            <a href="#" class="burger light ml-auto site-menu-toggle js-menu-toggle d-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
+              <span></span>
+            </a>
+            
+          </div>
+          
+        </div>  
+      </nav> 
+      <!-- END nav -->
+      
+    </div> 
+    <!-- END container  end nav-->
+    <!-- side nav-->
+    
+    
+    
+    <div class="site-section site-cover-2" style="margin-top: 7em; background-image: url('images/hero-min.jpg')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 mx-auto text-center">
+            <h2 class="text-white mb-4">Repository-Discovery
+            </h2>
+           </div>
+        </div>
+      </div>
+    </div>
+   
+    <div class="site-section" id="portfolio-section">
+      <div class="container">
+
+        <div class="filters" data-aos="fade-up" data-aos-delay="100">
+          <ul>
+            <li class="active" data-filter="*">Übersicht</li>
+            <li data-filter=".beschreibung">Beschreibung</li><!-- packaging -->
+           
+           
+            <li data-filter=".repo">Deliverables</li>
+           
+            <li data-filter=".kontakt">Kontakt</li>
+          </ul>
+        </div>
+     
+        <div class="filters-content mb-5" data-aos="fade-up" data-aos-delay="200">
+        <div class="row grid">
+           <div class="col-6 all beschreibung">
+           
+             <p>Das Teilprojekt "Repositorien Discovery" wurde in enger Verzahnung mit dem Teilprojekt "EOSC" durchgeführt und zielte auf eine bessere Auffindbarkeit 
+               geistes- und kulturwissenschaftlicher Forschungsdaten und -ressourcen in den österreichischen Repositorien ab.
+             </p>
+             <p>Zu diesem Zweck war der Aufbau eines österreichweiten Verbundes von Repositorien wie <a href="https://arche.acdh.oeaw.ac.at/" target="_blank">ARCHE</a> (ACDH-CH), <a href="https://gams.uni-graz.at/" target="_blank">GAMS</a> 
+               (Universität Graz, ZIM-ACDH) und <a href="https://phaidra.univie.ac.at/" target="_blank">PHAIDRA</a> (Universität Wien) geplant, um den Wissensaustausch zu verstärken und die bestehenden Repositorien-Lösungen im Hinblick auf APIs, 
+               Metadatenschemata und Richtlinien zu harmonisieren. Weiters wurde auch eine verstärkte Zusammenarbeit zwischen den Digital Humanities und Cultural Heritage Institutionen 
+               (GLAM) nach dem Vorbild der <a href="https://labs.onb.ac.at/de/" target="_blank">ÖNB Library Labs</a> angestrebt, um die Sichtbarkeit und Nutzbarkeit von Cultural Heritage Daten und Objekten zu erhöhen.
+             </p>
+             <p>Die ursprünglich anvisierte Idee eines eigenen österreichischen Katalogs für DH-Forschungsdaten (<a href="https://dha-catalogue.acdh-dev.oeaw.ac.at/resource/dhacat:Start" target="_blank">dha-catalogue</a> basierend auf 
+               der <a href="https://github.com/ditah-at/dha-ontology" target="_blank">dha-ontology</a>) wurde zugunsten einer Integration mit etablierten Lösungen auf europäischer Ebene aufgegeben, allen voran 
+               <a href="https://www.openaire.eu/" target="_blank">OpenAIRE</a> (Open Access Infrastructure for Research in Europe) und <a href="https://marketplace.sshopencloud.eu/" target="_blank">SSH Open Marketplace</a>. Dies ermöglicht eine deutlich höhere Reichweite für die Dissemination der Forschungsoutputs und minimiert den Aufwand für die Entwicklung und Wartung von eigenen Komponenten. Im Rahmen des Projekts konnten die Repositorien ARCHE und GAMS in OpenAIRE integriert werden (PHAIDRA war bereits integriert), sodass neue Ressourcen aus diesen Repositorien automatisch aggregiert werden.
+             </p>
+             <p>Um einen Überblick über die Gesamtheit der österreichischen DH-Ressourcen hinsichtlich ihrer Repräsentation in OpenAIRE zu gewinnen, wurde eine umfassende Analyse/kritische Auswertung durchgeführt. Diese hat eine sehr lückenhafte Abdeckung dieser Ressourcen aufgezeigt und weist auf einen erheblichen Bedarf bei der Kuratierung, Harmonisierung und Integration von Metadaten hin.
+               Bei solchen Maßnahmen zur Integration, Aggregation und Harmonisierung von Metadaten stellen Controlled Vocabularies einen notwendigen Baustein für die semantische Interoperabilität dar. In Vorbereitung auf eine zukünftige Harmonisierung wurde daher eine umfassende Analyse der sich in Verwendung befindlichen Vocabularies/Keywords der Repositorien ARCHE und GAMS sowie DARIAHCampus, SSHOC, TaDiRAH, der DHA Taxonomy, der DHA Website und anderen Initiativen durchgeführt.
+            </p>
+             <p>Durch seine Beteiligung an Infrastrukturprojekten wie SSHOC, konnte das ACDH-CH Team in diesem Zusammenhang auch auf bereits gewonnene Expertise bei der Entwicklung 
+               kontrollierter Vokabularien sowie auf jene, im Rahmen des SSHOC Projektes entwickelten, Ressourcen wie beispielsweise die Plattform <a href="https://vocabs.sshopencloud.eu/browse/en/" target="_blank">SSH Vocab Commons</a>, zurückgreifen.
+             </p>
+             <p>Im Rahmen des Teilprojektes hat sich schließlich auch die Arbeitsgruppe "DHA Commons" herauskristallisiert, deren Hauptaufgabe die Konsolidierung österreichischer Zotero-Libraries zum Thema DH mit Augenmerk auf eine Harmonisierung der verwendeten Tags war.
+             </p>
+           </div>
+          
+            <div class="col-6 all beschreibung">
+              <p><img src="images/projekte/repos_logo.jpg" alt="reposlogo" class="img-fluid"/></p>
+            </div>
+         </div>
+       
+       
+          <div class="row grid">
+            <div class="isotope-card col-sm-4 all">
+             
+                <img src="images/projekte/repografik.png" alt="Image" class="img-fluid">
+                <div class="contents">
+                  
+                  <div class="cat"><p>Abb. 1 Similary Matrix of Vocabularies
+                  </p></div>
+                  
+                </div>
+              
+            </div>
+            <div class="isotope-card col-sm-4 all repo">
+              <a href="https://dariah.openaire.eu/search/find/dataproviders" target="_blank">
+                <img src="images/projekte/dariah.jpg" alt="Image" class="img-fluid">
+                <div class="contents">
+                 
+                  <div class="cat"><p>ARCHE und GAMS in OpenAIRE und als Teil des DARIAH Community Gateway:
+                  </p></div>
+                  
+                </div>
+              </a>
+            </div>
+            <div class="isotope-card col-sm-4 all repo">
+              <a href="https://doi.org/10.5281/zenodo.12783384" target="_blank">
+                <img src="images/projekte/openaire.jpg" alt="Image" class="img-fluid">
+                <div class="contents">
+                  
+                  <div class="cat"><p>OpenAIRE analysis</p></div>
+                  
+                </div>
+              </a>
+            </div>
+            <div class="isotope-card col-sm-4 all repo">
+              <a href="https://github.com/ditah-at/dha-ontology"  target="_blank">
+                <img src="images/projekte/platzhalter.png" alt="Image" class="img-fluid">
+                <div class="contents">
+                  
+                  <div class="cat"><p>DHA Ontology</p></div>
+                  
+                </div>
+              </a>
+            </div>
+            <div class="isotope-card col-sm-4 all repo">
+              <a href="https://dha-catalogue.acdh-dev.oeaw.ac.at/resource/dhacat:Start"  target="_blank">
+                <img src="images/projekte/platzhalter.png" alt="Image" class="img-fluid">
+                <div class="contents">
+                 
+                  <div class="cat"><p>DHA Catalogue</p></div>
+                  
+                </div>
+              </a>
+            </div>
+            <div class="isotope-card col-sm-4 all repo">
+              <a href="https://www.zotero.org/groups/4822236/dha_bibliothek/library"  target="_blank">
+                <img src="images/projekte/platzhalter.png" alt="Image" class="img-fluid">
+                <div class="contents">
+                 
+                  <div class="cat"><p>DHA Commons Zotero Library</p></div>
+                  
+                </div>
+              </a>
+            </div>
+            <div class="isotope-card col-sm-4 all repo">
+              <a href="https://github.com/acdh-oeaw/vocabs-keywords/tree/main"  target="_blank">
+                <img src="images/projekte/platzhalter.png" alt="Image" class="img-fluid">
+                <div class="contents">
+                  <div class="cat"><p>DHA Commons Vocabs & Keywords</p></div>
+                  
+                </div>
+              </a>
+            </div>
+            <div class="isotope-card col-sm-4 all kontakt">
+              <a href="mailto:Matej.Durco@oeaw.ac.at">
+                <img src="images/projekte/kontakt.png" alt="Image" class="img-fluid">
+                <div class="contents">
+                  <h3>Kontakt: </h3>
+                  <div class="cat"><p>Matej Ďurčo</p>
+                    <p>Matej.Durco@oeaw.ac.at</p></div>
+                  
+                </div>
+              </a>
+            </div>
+           
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- .untrtee_co-section -->
+        
+
+    <div class="testimonial-section bg-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg-4 mb-5 section-title" data-aos="fade-up" data-aos-delay="0">
+            
+            <h2 class="mb-4 font-weight-bold heading">Projekte</h2>
+            <p class="mb-4">Erkunden Sie die Teilprojekte.</p>
+            <p><a href="#" class="btn btn-primary">Projektnetzwerk</a></p>
+          </div>
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            
+            <div class="testimonial--wrap">
+              <div class="owl-single owl-carousel no-dots no-nav">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center mb-4">
+                    <div class="photo mr-3">
+                      <img src="images/person_4-min.jpg" alt="Image" class="img-fluid">
+                    </div>
+                    <div class="author">
+                      <cite class="d-block mb-0">Kaila Woodland</cite>
+                      <span>Owner, Greenland, Inc.</span>
+                    </div>
+                  </div>
+                  <blockquote>
+                    <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live.&rdquo;</p>
+                  </blockquote>
+                </div>  
+
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center mb-4">
+                    <div class="photo mr-3">
+                      <img src="images/person_1-min.jpg" alt="Image" class="img-fluid">
+                    </div>
+                    <div class="author">
+                      <cite class="d-block mb-0">Kaila Woodland</cite>
+                      <span>Owner, Greenland, Inc.</span>
+                    </div>
+                  </div>
+                  <blockquote>
+                    <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live.&rdquo;</p>
+                  </blockquote>
+                </div>  
+
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center mb-4">
+                    <div class="photo mr-3">
+                      <img src="images/person_2-min.jpg" alt="Image" class="img-fluid">
+                    </div>
+                    <div class="author">
+                      <cite class="d-block mb-0">Kaila Woodland</cite>
+                      <span>Owner, Greenland, Inc.</span>
+                    </div>
+                  </div>
+                  <blockquote>
+                    <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live.&rdquo;</p>
+                  </blockquote>
+                </div>  
+              </div>
+              <div class="custom-nav-wrap">
+                <a href="#" class="custom-owl-prev"><span class="icon-keyboard_backspace"></span></a>
+                <a href="#" class="custom-owl-next"><span class="icon-keyboard_backspace"></span></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="site-section overlay site-cover-2" style="background-image: url('images/hero-min.jpg')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 mx-auto text-center">
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-footer">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-4">
+            <div class="widget">
+              <p><a href="about.html">About</a></p>
+              <p><a href="impressum.html">Impressum</a></p>
+              <p>Projektlead: Universität Graz</p>
+              <p>Kontakt: <a href="mailto:ditah@uni-graz.at">ditah@uni-graz.at</a></p>
+            </div>
+            <div class="widget">
+              <img src="images/DiTAH_Logo_blau-01.png" alt="Ditah Logo" width="200"/>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-12">
+                <div class="widget">
+                  <h3>Navigation</h3>
+                </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4">
+                <div class="widget">
+                  <ul class="links list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Process</a></li>
+                    <li><a href="#">About Us</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4">
+                <div class="widget">
+                  <ul class="links list-unstyled">
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4">
+                <div class="widget">
+                  <ul class="links list-unstyled">
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Process</a></li>
+                    <li><a href="#">About Us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--   <div class="row justify-content-center text-center copyright">
+          <div class="col-md-8">
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> <!-\- License information: https://untree.co/license/ -\->
+            </p> <br/> 
+            <p> Dsitributed by <a href="https://themewagon.com">themewagon</a> </p>
+          </div>
+        </div>-->
+      </div>
+    </div>
+    
+    
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    
+  
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/imagesloaded.pkgd.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/searchbar.js"></script>
+  </body>
+  </html>
