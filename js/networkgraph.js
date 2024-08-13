@@ -80,6 +80,8 @@
             { source: "Wissenstransfer", target: "habsburg.html" },
             { source: "Wissenstransfer", target: "onbkulturerbe.html" },
             { source: "Wissenstransfer", target: "training.html" },
+            { source: "Wissenstransfer", target: "digi16.html" },
+            { source: "Wissenstransfer", target: "ficker.html" },
              
             { source: "Infra", target: "https://gams.uni-graz.at" },
             { source: "Infra", target: "https://arche.acdh.oeaw.ac.at" },
