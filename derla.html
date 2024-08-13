@@ -27,148 +27,7 @@
     
     </head>
   <body>
-    <!-- nav start -->
-    <div class="site-mobile-menu site-navbar-target sticky-top">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close">
-          <span class="icofont-close js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-    <div class="container sticky-top">
-      <nav class="site-nav sticky-top">
-        <div class="logo">
-          <a href="index.html" class="text-white ml-5">
-            <img src="images/DiTAH_Logo_blau-01.svg" alt="Ditah Logo" width="200" />
-          </a>
-        </div>
-        <div class="row align-items-center">
-          <div class="col-12 col-sm-12 col-lg-12 site-navigation text-center">
-            <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu">
-              <li>
-                <a href="index.html">Home</a>
-              </li>
-              <li class="has-children">
-                <a href="#">Partner</a>
-                <ul class="dropdown">
-                  <li>
-                    <a href="projekttemplate.html">template</a>
-                  </li>
-                  <li>
-                    <a href="projekttemplate.html">template</a>
-                  </li>
-                  <li>
-                    <a href="projekttemplate.html">template</a>
-                  </li>
-                  <li>
-                    <a href="projekttemplate.html">template</a>
-                  </li>
-                  <li class="has-children">
-                    <a href="#">CIMA</a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="#">Sub Menu One</a>
-                      </li>
-                      <li>
-                        <a href="#">Sub Menu Two</a>
-                      </li>
-                      <li>
-                        <a href="#">Sub Menu Three</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">Narrative?</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="has-children">
-                <a class="active" href="#">Projekte</a>
-                <ul class="dropdown">
-                  <li>
-                    <a href="projekttemplate.html">template</a>
-                  </li>
-                  <li>
-                    <a href="projekttemplate.html">template</a>
-                  </li>
-                  <li>
-                    <a href="projekttemplate.html">template</a>
-                  </li>
-                  <li>
-                    <a href="projekttemplate.html">template</a>
-                  </li>
-                  <li class="has-children">
-                    <a href="#">CIMA</a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="#">Sub Menu One</a>
-                      </li>
-                      <li>
-                        <a href="#">Sub Menu Two</a>
-                      </li>
-                      <li>
-                        <a href="#">Sub Menu Three</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">Narrative?</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="active">
-                <a href="about.html">About</a>
-              </li>
-              <li>
-                <a href="index.html#about">
-                <img src="images/node-plus.svg" alt="nodeicon" />
-                </a>
-              </li>
-            
-            </ul>
-            <a href="#"
-              class="burger light ml-auto site-menu-toggle js-menu-toggle d-block d-lg-none"
-              data-toggle="collapse" data-target="#main-navbar">
-              <span></span>
-            </a>
-          </div>
-        </div>
-      </nav>
-      <!-- END nav -->
-    </div>
-
-<div class="site-section-search row">
-      <div class="col-lg-9 col-sm-6 col-md-8"> </div>
-      <div class=" col-lg-3 col-sm-6 col-md-4 float-right input-group mb-3 mt-5">
-    <input type="text" id="searchBox" class="form-control-sm"
-      placeholder="Suchbegriff eingeben..." aria-label="Search"
-      style="border-color: #004567 !important; border: solid 0.5px; border-radius: 3px;">
-    <button class="btn-sm btn-outline-secondarysub" type="button"
-      style="background-color: #ffffff !important; border-color: #004567 !important; border: solid 0.5px;" onclick="search()"
-      >Suche</button>
-  </div>
-</div>
-    <!-- END container  end nav-->
-  
-    <!-- Modal for search bar, opens when search button is clicked-->
-    <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="resultsModalLabel">Suchergebnisse</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body" id="results"></div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #004567">Schließen</button>
-          </div>
-        </div>
-      </div>
-    </div>
-   <!-- nav plus bis hier her in alle untersieten kopieren -->
+    <div id="navbar"></div>
    
     <div class="site-section site-cover-2"
       style="margin-top: 7em; background-image: url('images/hero-min.jpg')">
@@ -790,7 +649,11 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/custom.js"></script>
-   
+    
+    <script src="js/navbar.js"></script>
+    <script src="js/infooverlay.js"></script>
+    <script src="js/overlay.js"></script>
+    <script src="js/footer.js"></script>
     <script src="js/searchbar.js"></script>
   </body>
 </html>
