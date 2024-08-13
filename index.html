@@ -107,11 +107,8 @@
 
   
   
-<!-- nav start -->
+<!-- nav bar, loaded externally from navbar.html -->
   <div id="navbar"></div>
-  <!-- END container  end nav-->
-
-
 
     <div class="hero-slant overlay" data-stellar-background-ratio="0.5" style="background-image: url('images/hero-min.jpg')">
 
@@ -133,7 +130,6 @@
       <div class="slant" style="background-image: url('images/slant.svg');"></div>
     </div>
 
-<!-- partner logos einfügen -->
     <div class="py-3">
       <div class="container">
 
@@ -844,13 +840,6 @@ function closeVOverlay() {
 document.getElementById("videoOverlay").style.width = "0%";
 }
   </script>
-  <script>
-    fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar').innerHTML = data;
-        });
-  </script>
   
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
@@ -866,6 +855,7 @@ document.getElementById("videoOverlay").style.width = "0%";
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/custom.js"></script>
    
+    <script src="js/navbar.js"></script>
     <script src="js/networkgraph.js"></script>
     <script src="js/searchbar.js"></script>
   
