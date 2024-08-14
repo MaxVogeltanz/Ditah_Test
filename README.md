@@ -1,6 +1,11 @@
 # Ditah_Test
 
-## Dokumentation:
+## Project
+DiTAH Digitale Transformation der Österreichisches Geisteswissenschaften
+Austrian Cooperation Project
+Project-Lead: Graz, Prof. Georg Vogeler
+
+## Documentation:
 Append-1.0.0 Template from free Bootstrap templates
 Color code: #004567
 Every projects has its own html
@@ -17,4 +22,9 @@ overlay.js is for opening and closing the items in the side nav in an overlay
 
 Footer
 is loaded with footer.js and created with footer.html
+
+## Creators:
+Elisabeth Raunig elisabeth.raunig@uni-graz.at
+Maximilian Vogeltanz maximilian.vogeltanz@uni-graz.at
+
 
