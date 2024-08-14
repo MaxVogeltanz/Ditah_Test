@@ -148,5 +148,11 @@
     "title": "The Centre of Image and Material Analysis in Cultural Heritage - Projekte",
     "content": "Im Rahmen von CIMA und der damit einhergehenden interdisziplinären Untersuchung von historischen Handschriften entsteht eine Vielfalt an Mess- und Beschreibungsdaten: diese reichen von Aufnahmen mit verschiedenen Wellenlängen (sog. Multi- und Hyperspektralbilder) über spektroskopische und mikrobiologische Materialanalysen, kodikologische und restauratorische Beschreibungen, bis hin zu Transkriptionen und philologischen Editionen.",
     "url": "cima.html"
+  },
+  {
+    "id": "gipse",
+    "title": "Virtuelles Gipsmuseum",
+    "content": "Ziel des Projekts war die Entwicklung eines Virtuellen Museums der Abgusssammlung am Institut für Antike an der Universität Graz. Es umfasste die Digitalisierung (durch FARO Laserscan) der denkmalgeschützten Sammlungsräumlichkeiten im Universitätshauptgebäude, die Kompilierung relevanter archäologischer und sammlungsgeschichtlicher Daten zu den Gipsabgüssen sowie die Einpflegung in GAMS. Zusätzlich wurden im Projekt 3D-Modelle ausgewählter Gipsabgüsse, ein Prototyp für die Präsentation der Daten zu den Abgüssen und ihrer Geschichte erstellt und gemeinsam mit 3D-Beispielmodellen in einem virtuellen Rundgang zur Verfügung gestellt. Der Einsatz dieser Werkzeuge, der vor allem im Bereich der Digitalen Museumswissenschaften anzusiedeln ist, soll den Zugang zu der umfassenden Objektsammlung erleichtern, Interesse an den Objekten und ihrer Geschichte wecken und ihre Sichtbarkeit weiter stärken. Aus diesem Grund werden auch allgemeine Informationen über die Sammlung bereitgestellt. Die Arbeiten werden unter direkter Einbindung von Studierenden durchgeführt und von einschlägigen Lehrveranstaltungen am Institut für Antike und am Institut für Digitale Geisteswissenschaften begleitet, um vor allem die Erstellung von 3D-Modellen sowie die Erfassung von archäologischen Informationen und Daten zu unterstützen.",
+    "url": "gipse.html"
   }
 ]
