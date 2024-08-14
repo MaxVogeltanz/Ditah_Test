@@ -3,7 +3,7 @@
 ## Project
 DiTAH Digitale Transformation der Österreichisches Geisteswissenschaften
 Austrian Cooperation Project
-Project-Lead: Graz, Prof. Georg Vogeler
+Project-Lead: Graz, Prof. Georg Vogeler ditah@uni-graz.at
 
 ## Documentation:
 Append-1.0.0 Template from free Bootstrap templates
