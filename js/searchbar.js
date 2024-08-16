@@ -69,8 +69,16 @@ function displayResults(results) {
 }
 
 // Add event listener for the Enter key
-document.getElementById('searchBox').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        search(); // Perform search on Enter key press
+document.addEventListener("DOMContentLoaded", function() {
+    const searchBox = document.getElementById('searchBox');
+    
+    if (searchBox) {
+        // Event listener for Enter key
+        searchBox.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();  // Prevent form submission if it's inside a form
+                search();  // Call the search function
+            }
+        });
     }
 });
