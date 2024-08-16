@@ -68,7 +68,6 @@ function displayResults(results) {
     $('#resultsModal').modal('show'); // Show the results modal
 }
 
-// Add event listener for the Enter key
 document.addEventListener("DOMContentLoaded", function() {
     const searchBox = document.getElementById('searchBox');
     
@@ -77,8 +76,12 @@ document.addEventListener("DOMContentLoaded", function() {
         searchBox.addEventListener('keypress', function(event) {
             if (event.key === 'Enter') {
                 event.preventDefault();  // Prevent form submission if it's inside a form
+                console.log('Enter key pressed'); // Add this line for debugging
                 search();  // Call the search function
             }
         });
+    } else {
+        console.error('SearchBox element not found'); // Add this line for debugging
     }
 });
+
