@@ -67,10 +67,3 @@ function displayResults(results) {
 
     $('#resultsModal').modal('show'); // Show the results modal
 }
-
-// Add event listener for the Enter key
-document.getElementById('searchBox').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        search(); // Perform search on Enter key press
-    }
-});
