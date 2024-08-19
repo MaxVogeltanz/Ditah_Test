@@ -45,6 +45,7 @@
 
         ];
 
+        /* Defining Links between nodes */
         const links = [
             { source: "Infra", target: "Methoden" },
             { source: "Infra", target: "Wissenstransfer" },
@@ -239,6 +240,7 @@ function ticked() {
         });
 }
 
+/* Handling mouse drag of nodes */
 function dragstarted(event, d) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
     d.fx = d.x;
@@ -259,6 +261,7 @@ function dragended(event, d) {
     }
 }
 
+/* Zoom functionality */
 function applyZoomAndPan() {
     const zoom = d3.zoom()
         .scaleExtent([0.5, 3])
