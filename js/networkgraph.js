@@ -1,46 +1,46 @@
 
         const nodes = [
             /*3 basic nodes*/
-            { id: "Infra", name: "Infrastruktur", category: "Säule", year: 2020, color: "#004567" },
-            { id: "Methoden", name: "Methoden & Tools", category: "Säule", year: 2020, color: "#004567" },
-            { id: "Wissenstransfer", name: "Wissenstransfer", category: "Säule", year: 2020, color: "#004567" },
+            { id: "Infra", name: "Infrastruktur", category: "Säule", year: 2020, color: "#004567", tooltip: "<div style='background-color:#004567'><b>Details:</b><br/>Infrastruktur</div>"},
+            { id: "Methoden", name: "Methoden & Tools", category: "Säule", year: 2020, color: "#004567", tooltip: "<div style='background-color:#004567'><b>Details:</b><br/>Methoden und Tools</div>"},
+            { id: "Wissenstransfer", name: "Wissenstransfer", category: "Säule", year: 2020, color: "#004567", tooltip: "<div style='background-color:#004567'><b>Details:</b><br/>Wissenstransfer</div>"},
             
             /*organisation nodes*/
-            { id: "partner.html#oaw", name: "ÖAW", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
-            { id: "partner.html#tuw", name: "TU Wien", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
-            { id: "partner.html#ui", name: "Uni Innsbruck", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
-            { id: "partner.html#ug", name: "Uni Graz", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
-            { id: "partner.html#plus", name: "PLUS", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
-            { id: "cima.html", name: "CIMA", category: "Organisationen", year: 2023, color: "#660066" },
-            { id: "partner.html#abk", name: "ABK", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
-            { id: "partner.html#krems", name: "UWK", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
-            { id: "partner.html#uw", name: "Uni Wien", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
-            { id: "partner.html#onb", name: "ÖNB", category: "Organisationen", year: 2020, color: "#660000", clickable: true},
+            { id: "partner.html#oaw", name: "ÖAW", category: "Organisationen", year: 2020, color: "#660000", tooltip: "<div style='background-color:#660000'><b>Details:</b><br/>Österreichische Akademie der Wissenschaften (ÖAW)</div>", clickable: true},
+            { id: "partner.html#tuw", name: "TU Wien", category: "Organisationen", year: 2020, color: "#660000", tooltip: "<div style='background-color:#660000'><b>Details:</b><br/>Technische Universität Wien (TU)</div>", clickable: true},
+            { id: "partner.html#ui", name: "Uni Innsbruck", category: "Organisationen", year: 2020, color: "#660000", tooltip: "<div style='background-color:#660000'><b>Details:</b><br/>Universität Innsbruck</div>", clickable: true},
+            { id: "partner.html#ug", name: "Uni Graz", category: "Organisationen", year: 2020, color: "#660000", tooltip: "<div style='background-color:#660000'><b>Details:</b><br/>Karl-Franzens-Universität Graz</div>", clickable: true},
+            { id: "partner.html#plus", name: "PLUS", category: "Organisationen", year: 2020, color: "#660000", tooltip: "<div style='background-color:#660000'><b>Details:</b><br/>Paris-Lodron-Universität Salzburg (PLUS)</div>", clickable: true},
+            { id: "cima.html", name: "CIMA", category: "Organisationen", year: 2023, color: "#660066", tooltip: "<div style='background-color:#660066'><b>Details:</b><br/>The Centre of Image and Material Analysis in Cultural Heritage (CIMA)</div>"},
+            { id: "partner.html#abk", name: "ABK", category: "Organisationen", year: 2020, color: "#660000", tooltip: "<div style='background-color:#660000'><b>Details:</b><br/>Akademie der Bildenden Künste in Wien (ABK)</div>", clickable: true},
+            { id: "partner.html#krems", name: "UWK", category: "Organisationen", year: 2020, color: "#660000", tooltip: "<div style='background-color:#660000'><b>Details:</b><br/>Universität für Weiterbildung Krems</div>", clickable: true},
+            { id: "partner.html#uw", name: "Uni Wien", category: "Organisationen", year: 2020, color: "#660000", tooltip: "<div style='background-color:#660000'><b>Details:</b><br/>Universität Wien</div>", clickable: true},
+            { id: "partner.html#onb", name: "ÖNB", category: "Organisationen", year: 2020, color: "#660000", tooltip: "<div style='background-color:#660000'><b>Details:</b><br/>Österreichische Nationalbibliothek (ÖNB)</div>", clickable: true},
             
             /*infrastructure-nodes*/
-            { id: "https://gams.uni-graz.at", name: "GAMS", category: "Infrastruktur", year: 2020, color: "#666600", clickable: true},
-            { id: "https://arche.acdh.oeaw.ac.at", name: "ARCHE", category: "Infrastruktur", year: 2020, color: "#666600", clickable: true},
-            { id: "https://phaidra.univie.ac.at", name: "PHAIDRA", category: "Infrastruktur", year: 2020, color: "#666600", clickable: true},
+            { id: "https://gams.uni-graz.at", name: "GAMS", category: "Infrastruktur", year: 2020, color: "#666600", tooltip: "<div style='background-color:#666600'><b>Details:</b><br/>GAMS - Geisteswissenschaftliches Asset Management System</div>", clickable: true},
+            { id: "https://arche.acdh.oeaw.ac.at", name: "ARCHE", category: "Infrastruktur", year: 2020, color: "#666600", tooltip: "<div style='background-color:#666600'><b>Details:</b><br/>ARCHE - A Resource Centre for the HumanitiEs</div>", clickable: true},
+            { id: "https://phaidra.univie.ac.at", name: "PHAIDRA", category: "Infrastruktur", year: 2020, color: "#666600", tooltip: "<div style='background-color:#666600'><b>Details:</b><br/>PHAIDRA - repository for the permanent secure storage of digital assets (Universität Wien)</div>", clickable: true},
             
             /*project nodes*/
-            { id: "fercan.html", name: "FERCAN", category: "Projekte", category2: "MethodenTools", year: 2022, color: "#006600", clickable: true},
-            { id: "derla.html", name: "DERLA", category: "Projekte", category2: "MethodenTools", category3: "Wissenstransfer", year: 2022, color: "#006600", clickable: true},
-            { id: "ficker.html", name: "Ficker-Edition", category: "Projekte", category2: "MethodenTools", category3: "Wissenstransfer", year: 2024, color: "#006600", clickable: true},
-            { id: "hps.html", name: "HPS", category: "Projekte", category2: "MethodenTools", year: 2023, color: "#006600", clickable: true},
-            { id: "gipse.html", name: "GIPSE", category: "Projekte", category2: "MethodenTools", year: 2024, color: "#006600", clickable: true},
-            { id: "digi16.html", name: "DIGI 16", category: "Projekte", category2: "MethodenTools", category3: "Wissenstransfer", year: 2024, color: "#006600", clickable: true},
-            { id: "m3r.html", name: "M3R", category: "Projekte", category2: "MethodenTools", year: 2024, color: "#006600", clickable: true},
-            { id: "onbkulturerbe.html", name: "Kulturerbe", category: "Projekte", category2: "MethodenTools", category3: "Wissenstransfer", category4: "Infrastruktur", year: 2023, color: "#006600", clickable: true},
-            { id: "holzmeister.html", name: "Holzmeister", category: "Projekte", category2: "MethodenTools", category3: "Infrastruktur", year: 2024, color: "#006600", clickable: true},
-            { id: "fotodatenbank.html", name: "Fotodatenbank", category: "Projekte", category2: "MethodenTools", category3: "Infrastruktur", year: 2024, color: "#006600", clickable: true},
-            { id: "rnab.html", name: "RNAB", category: "Projekte", category2: "MethodenTools", category3: "Infrastruktur", year: 2023, color: "#006600", clickable: true},
-            { id: "dhlehre.html", name: "DH Lehre", category: "Projekte", category2: "Wissenstransfer", year: 2023, color: "#006600", clickable: true},
-            { id: "habsburg.html", name: "Habsburg", category: "Projekte", category2: "Wissenstransfer", category3: "Infrastruktur", year: 2023, color: "#006600", clickable: true},
-            { id: "dhplus.html", name: "DH Plus", category: "Projekte", category2: "Wissenstransfer", year: 2023, color: "#006600", clickable: true},
-            { id: "training.html", name: "training", category: "Projekte", category2: "Wissenstransfer", year: 2022, color: "#006600", clickable: true},
-            { id: "eosc.html", name: "EOSC", category: "Projekte", category2: "MethodenTools", year: 2024, color: "#006600", clickable: true},
-            { id: "pipelines.html", name: "Hybrid Pipelines", category: "Projekte", category2: "Infrastruktur", year: 2024, color: "#006600", clickable: true},
-            { id: "repository.html", name: "Repository-Discovery", category: "Projekte", category2: "Infrastruktur", year: 2024, color: "#006600", clickable: true},
+            { id: "fercan.html", name: "FERCAN", category: "Projekte", category2: "MethodenTools", year: 2022, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Die keltischen Götternamen der germanischen Provinzen (FERCAN)</div>", clickable: true},
+            { id: "derla.html", name: "DERLA", category: "Projekte", category2: "MethodenTools", category3: "Wissenstransfer", year: 2022, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>DERLA | Verfolgung und Widerstand im Nationalsozialismus</div>", clickable: true},
+            { id: "ficker.html", name: "Ficker-Edition", category: "Projekte", category2: "MethodenTools", category3: "Wissenstransfer", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Edition Ludwig von Ficker</div>", clickable: true},
+            { id: "hps.html", name: "HPS", category: "Projekte", category2: "MethodenTools", year: 2023, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Historisch-physikalische Sammlung (HPS)</div>", clickable: true},
+            { id: "gipse.html", name: "GIPSE", category: "Projekte", category2: "MethodenTools", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Virtuelles Gipsmuseum</div>", clickable: true},
+            { id: "digi16.html", name: "DIGI 16", category: "Projekte", category2: "MethodenTools", category3: "Wissenstransfer", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Digi 16: Druckwerke des 16. Jahrhunderts</div>", clickable: true},
+            { id: "m3r.html", name: "M3R", category: "Projekte", category2: "MethodenTools", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>M3R - Multimodale Repräsentation & Analyse von Manuskripten</div>", clickable: true},
+            { id: "onbkulturerbe.html", name: "Kulturerbe", category: "Projekte", category2: "MethodenTools", category3: "Wissenstransfer", category4: "Infrastruktur", year: 2023, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Österreichische Nationalbibliothek: Nutzerzentrierte Zugänge zum digitalen österreichischen Kulturerbe</div>", clickable: true},
+            { id: "holzmeister.html", name: "Holzmeister", category: "Projekte", category2: "MethodenTools", category3: "Infrastruktur", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Digitales Werkverzeichnis Clemens Holzmeister</div>", clickable: true},
+            { id: "fotodatenbank.html", name: "Fotodatenbank", category: "Projekte", category2: "MethodenTools", category3: "Infrastruktur", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Foto-Datenbank</div>", clickable: true},
+            { id: "rnab.html", name: "RNAB", category: "Projekte", category2: "MethodenTools", category3: "Infrastruktur", year: 2023, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Datenverwaltung für RNAB-konforme Metadaten - RNABle</div>", clickable: true},
+            { id: "dhlehre.html", name: "DH Lehre", category: "Projekte", category2: "Wissenstransfer", year: 2023, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Digital Humanities Lehre an der Universität Wien</div>", clickable: true},
+            { id: "habsburg.html", name: "Habsburg", category: "Projekte", category2: "Wissenstransfer", category3: "Infrastruktur", year: 2023, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Digitale Habsburg Platform / DH an der Universität Wien</div>", clickable: true},
+            { id: "dhplus.html", name: "DH Plus", category: "Projekte", category2: "Wissenstransfer", year: 2023, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Digital Humanities an der Paris-Lodron-Universität Salzburg</div>", clickable: true},
+            { id: "training.html", name: "training", category: "Projekte", category2: "Wissenstransfer", year: 2022, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Training an der Österreichischen Akademie der Wissenschaften</div>", clickable: true},
+            { id: "eosc.html", name: "EOSC", category: "Projekte", category2: "MethodenTools", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>European Open Science Cloud (EOSC)</div>", clickable: true},
+            { id: "pipelines.html", name: "Hybrid Pipelines", category: "Projekte", category2: "Infrastruktur", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Hybrid Pipelines</div>", clickable: true},
+            { id: "repository.html", name: "Repository-Discovery", category: "Projekte", category2: "Infrastruktur", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Repository-Discovery</div>", clickable: true}
 
         ];
 
@@ -117,7 +117,7 @@
             { source: "partner.html#tuw", target: "m3r.html" },
             { source: "partner.html#krems", target: "m3r.html" },
             
-            { source: "m3r.html", target: "partner.html#uw" },
+            { source: "m3r.html", target: "partner.html#uw" }
 
         ];
 
@@ -193,28 +193,22 @@ function createNodes(nodesData) {
             if (d.clickable) {
                 window.open(d.id, '_blank');
             }
-    })
-    .on("mouseover", (event, d) => {
-        tooltip.style("opacity", 1)
-            .html(d.name)
-            .style("left", `${event.pageX + 5}px`)
-            .style("top", `${event.pageY + 5}px`);
-    })
-    .on("mousemove", (event, d) => {
-        tooltip.style("left", `${event.pageX + 5}px`)
-            .style("top", `${event.pageY + 5}px`);
-    })
-    .on("mouseout", () => {
-        tooltip.style("opacity", 0);
-    })
-    .call(d3.drag()
-        .on("start", dragstarted)
-        .on("drag", dragged)
-        .on("end", dragended));
+        })
+        .on("mouseover", (event, d) => {
+            tooltip.style("opacity", 1)
+                .html(d.tooltip); // Use the tooltip property for the text
+        })
+        .on("mouseout", () => {
+            tooltip.style("opacity", 0);
+        })
+        .call(d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended));
 
     enterNodes.append("circle")
         .attr("r", d => d.radius)
-        .attr("fill", d => d.color); // Use the color property
+        .attr("fill", d => d.color);
 
     enterNodes.append("text")
         .attr("dy", 3)
