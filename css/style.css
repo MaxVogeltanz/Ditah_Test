@@ -2298,7 +2298,8 @@ margin-left: 1.5em;
             color: #000000 !important; /* Optional: change text color */
        }
 #searchboxdown {
-
-   z-index:100;
-  
+   padding-top: 15px;
     }
+#navbarsearch{
+    background-color: #ffffff;
+}
