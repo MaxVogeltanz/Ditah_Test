@@ -166,17 +166,19 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     color: #004567; }
    @media screen and (min-width: 600px) { .logo img{
         width: 200px;
+        margin-left: 30px;
     }
 }
 @media screen and (max-width: 599px) { .logo img{
         width: 100px;
+        margin-left:5px;
     }
 }
 .site-nav {
   position: fixed;
   top: 0;
-  left: 30px;
-  right: 30px;
+ left: 0px;
+  right: 0px;
   z-index: 99; }
 
 .menu-absolute {
@@ -185,7 +187,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 .site-nav {
   padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px; 
+  }
   .site-nav h1 {
     margin: 0;
     padding: 0;
@@ -508,7 +511,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   width: 28px;
   height: 32px;
   cursor: pointer;
-  position: relative; }
+  position: relative;
+ margin-right: 30px;}
 
 .burger:before, .burger span, .burger:after {
   width: 100%;
