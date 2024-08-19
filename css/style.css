@@ -2297,3 +2297,6 @@ margin-left: 1.5em;
 .btn-outline-secondarysub:hover {
             color: #000000 !important; /* Optional: change text color */
        }
+#navbarsearch {
+    margin-top: 15px;
+    }
