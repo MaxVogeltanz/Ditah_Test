@@ -48,7 +48,18 @@
             stroke: #fff;
             stroke-opacity: 0.6;
         }
-        .tooltipng {
+/*        .tooltipng {
+            position: absolute;
+            padding: 5px;
+            pointer-events: none;
+            z-index: 1000;
+            transition: opacity 0.5s ease-in;
+            width: 75%;
+            text-align: center;
+            font-size: small;
+        }*/
+        @media screen and (min-width: 600px){
+            .tooltipng {
             position: absolute;
             padding: 5px;
             pointer-events: none;
@@ -58,6 +69,18 @@
             text-align: center;
             font-size: small;
         }
+        }
+        @media screen and (max-width: 599px) {
+            .tooltipng {
+            position: absolute;
+            padding: 5px;
+            pointer-events: none;
+            z-index: 1000;
+            transition: opacity 0.5s ease-in;
+            width: 75%;
+            text-align: center;
+            font-size: 10px;
+        }}
         </style>
   
 </head>
