@@ -2302,3 +2302,7 @@ margin-left: 1.5em;
    padding-top:2em;
    background-color: #ffffff;
     }
+#navindex {
+    transition: background-color 0.5s ease; /* Adjust the duration and easing function as needed */
+}
+
