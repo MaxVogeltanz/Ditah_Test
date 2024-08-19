@@ -724,8 +724,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   background-color: transparent;
   position: fixed;
   top: 0;
-  left: 30px;
-  right: 30px;
+  left: 0px;
+  right: 0px;
   z-index: 99;
   }
 
@@ -2297,10 +2297,8 @@ margin-left: 1.5em;
 .btn-outline-secondarysub:hover {
             color: #000000 !important; /* Optional: change text color */
        }
+
 #searchboxdown {
-   padding-top: 25px;
-  background-color: #ffffff;
+   padding-top: 21px;
+   background-color: #ffffff;
     }
-#navbarsearch{
-    background-color: #ffffff;
-}
