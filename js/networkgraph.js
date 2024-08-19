@@ -34,13 +34,14 @@
             { id: "holzmeister.html", name: "Holzmeister", category: "Projekte", category2: "MethodenTools", category3: "Infrastruktur", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Digitales Werkverzeichnis Clemens Holzmeister</div>", clickable: true},
             { id: "fotodatenbank.html", name: "Fotodatenbank", category: "Projekte", category2: "MethodenTools", category3: "Infrastruktur", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Foto-Datenbank</div>", clickable: true},
             { id: "rnab.html", name: "RNAB", category: "Projekte", category2: "MethodenTools", category3: "Infrastruktur", year: 2023, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Datenverwaltung für RNAB-konforme Metadaten - RNABle</div>", clickable: true},
-            { id: "dhlehre.html", name: "DH Lehre", category: "Projekte", category2: "Wissenstransfer", year: 2023, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Digital Humanities Lehre an der Universität Wien</div>", clickable: true},
+            { id: "dhlehre.html", name: "DH Lehre Wien", category: "Projekte", category2: "Wissenstransfer", year: 2023, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Digital Humanities Lehre an der Universität Wien</div>", clickable: true},
             { id: "habsburg.html", name: "Habsburg", category: "Projekte", category2: "Wissenstransfer", category3: "Infrastruktur", year: 2023, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Digitale Habsburg Platform / DH an der Universität Wien</div>", clickable: true},
             { id: "dhplus.html", name: "DH Plus", category: "Projekte", category2: "Wissenstransfer", year: 2023, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Digital Humanities an der Paris-Lodron-Universität Salzburg</div>", clickable: true},
             { id: "training.html", name: "training", category: "Projekte", category2: "Wissenstransfer", year: 2022, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Training an der Österreichischen Akademie der Wissenschaften</div>", clickable: true},
             { id: "eosc.html", name: "EOSC", category: "Projekte", category2: "MethodenTools", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>European Open Science Cloud (EOSC)</div>", clickable: true},
             { id: "pipelines.html", name: "Hybrid Pipelines", category: "Projekte", category2: "Infrastruktur", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Hybrid Pipelines</div>", clickable: true},
-            { id: "repository.html", name: "Repository-Discovery", category: "Projekte", category2: "Infrastruktur", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Repository-Discovery</div>", clickable: true}
+            { id: "repository.html", name: "Repository-Discovery", category: "Projekte", category2: "Infrastruktur", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Repository-Discovery</div>", clickable: true},
+            { id: "dhlehregraz.html", name: "DH Lehre Graz", category: "Projekte", category2: "Wissenstransfer", year: 2024, color: "#006600", tooltip: "<div style='background-color:#006600'><b>Details:</b><br/>Digital Humanities Lehre an der Universität Graz</div>", clickable: true}
 
         ];
 
@@ -77,6 +78,7 @@
             { source: "Wissenstransfer", target: "derla.html" },
             { source: "Wissenstransfer", target: "dhplus.html" },
             { source: "Wissenstransfer", target: "dhlehre.html" },
+            { source: "Wissenstransfer", target: "dhlehregraz.html" },
             { source: "Wissenstransfer", target: "habsburg.html" },
             { source: "Wissenstransfer", target: "onbkulturerbe.html" },
             { source: "Wissenstransfer", target: "training.html" },
@@ -94,6 +96,7 @@
             { source: "partner.html#ug", target: "gipse.html" },
             { source: "partner.html#ug", target: "fercan.html" },
             { source: "partner.html#ug", target: "digi16.html" },
+            { source: "partner.html#ug", target: "dhlehregraz.html" },
             { source: "partner.html#ui", target: "ficker.html" },
             { source: "partner.html#ui", target: "holzmeister.html" },
             { source: "partner.html#ui", target: "fotodatenbank.html" },
