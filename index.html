@@ -36,9 +36,6 @@
         .containerng {
         width: 70vw;
             height: 95vh ;
-          /*    background-position: center;
-            background-size:cover;*/
-            /*border: 1px solid #ddd;*/
             position: relative;
             overflow: hidden; /* Ensure anything outside the container is hidden */
             font-size: 0.75em;
@@ -54,10 +51,12 @@
         .tooltipng {
             position: absolute;
             padding: 5px;
-            background: white;
-            border: 1px solid #ccc;
             pointer-events: none;
-            opacity: 0;
+            z-index: 1000;
+            transition: opacity 0.5s ease-in;
+            width: 75%;
+            text-align: center;
+            font-size: small;
         }
         </style>
   
@@ -314,7 +313,6 @@
               <g id="graph" clip-path="url(#clip)"></g>
             </svg>
           </div>
-          <div class="tooltipng" id="tooltip"></div>
         </div></div>
       <div class="col-3" style="color: black; border-left: 2px solid;">
         <h3>Filter</h3>
@@ -329,6 +327,7 @@
           <input type="range" id="timeline" min="2020" max="2024" step="1" value="2024">
           <span id="timelineValue">2024</span>
         </div>
+        <div class="tooltipng" id="tooltip" style="color:white"></div>
       </div>
     </div>
   </div>
@@ -769,7 +768,6 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/custom.js"></script>
     
-    <script src="js/navbar.js"></script>
     <script src="js/infooverlay.js"></script>
     <script src="js/overlay.js"></script>
     <script src="js/footer.js"></script>
