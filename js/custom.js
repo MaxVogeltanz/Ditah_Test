@@ -12,7 +12,7 @@ document.querySelectorAll('a[href^="partner.html#"]').forEach(anchor => {
         const targetElement = document.querySelector(targetId);
 
         if (targetElement) {
-            const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 100; // Adjust the offset as needed
+            const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 150; // Adjust the offset as needed
             window.scrollTo({
                 top: offsetPosition,
                 behavior: "smooth"
