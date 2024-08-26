@@ -2122,7 +2122,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 .iconBar:hover {
     color: #004567;
-    box-shadow: 3px -200px 1px 1px #004567;
+   /* box-shadow: 3px -200px 1px 1px #004567;*/
 }
 
 .iconBar:hover a {
