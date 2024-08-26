@@ -4,22 +4,6 @@ AOS.init({
 	once: true
 });
 
-document.querySelectorAll('a[href^="partner.html#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-            const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 150; // Adjust the offset as needed
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            });
-        }
-    });
-});
 
 $(function(){
 
