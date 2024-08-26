@@ -2117,13 +2117,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 /*    border-right: 1px solid grey;*/
     font-size:1em;
 /*    background: white;*/
-    transition: all .2s ease-out;
+ /*   transition: all .2s ease-out;*/
 }
 
-.iconBar:hover {
+/*.iconBar:hover {
     color: #004567;
-   /* box-shadow: 3px -200px 1px 1px #004567;*/
-}
+    box-shadow: 3px -200px 1px 1px #004567;
+}*/
 
 .iconBar:hover a {
     color: #004567;
