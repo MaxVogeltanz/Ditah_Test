@@ -1,9 +1,9 @@
 
         const nodes = [
             /*3 basic nodes*/
-            { id: "Infrastruktur.html", name: "Infrastruktur", category: "Säule", year: 2020, color: "#004567", tooltip: "<div style='background-color:#004567'><b>Details:</b><br/>Infrastruktur:<br/>Aufbau einer gemeinsamen Forschungsdateninfrastruktur: Dafür werden technische Lösungen zur Erfassung und Beschreibung von Forschungsobjekten entwickelt. Diese Objekte werden in langfristig betreute Archivierungssysteme überführt, und es werden neue Lösungen für die Speicherung von Bilddaten gefunden.</div>"},
-            { id: "MethodenTools.html", name: "Methoden & Tools", category: "Säule", year: 2020, color: "#004567", tooltip: "<div style='background-color:#004567'><b>Details:</b><br/>Methoden und Tools:<br/>Abgleich digitaler und traditioneller geisteswissenschaftlicher Methoden: dabei werden Forschungsdaten unter Verwendung von etablierten Standards mit zusätzlichen Daten semantisch ausgezeichnet (Annotation), angereichert und damit für maschinelle Systeme lesbar gemacht. Weiters werden neue Methoden wie die maschinelle Erkennung und Bearbeitung von Bildmaterial (Computer Vision) angewandt. Künstliche Intelligenz unterstützt hierbei zunehmend entsprechende Arbeitsprozesse.</div>"},
-            { id: "Wissenstransfer", name: "Wissenstransfer", category: "Säule", year: 2020, color: "#004567", tooltip: "<div style='background-color:#004567'><b>Details:</b><br/>Wissenstransfer:<br/>Neue Methoden und Ansätze werden leicht verständlich aufbereitet: Es werden Tutorials geschrieben, die Methoden und Werkzeuge für Benutzer ohne Vorkenntnisse erklären. Außerdem werden Lösungen entwickelt, wie Forschungsdaten präsentiert und Daten aus verschiedenen Datenbanken abgerufen (Information Retrieval) werden können . Dabei werden innovative Methoden zur Wissensvermittlung genutzt, wie z.B. die Visualisierung von Daten.</div>"},
+            { id: "Infrastruktur.html", name: "Infrastruktur", category: "Säule", year: 2020, color: "#004567", tooltip: "<div style='background-color:#004567'><b>Details:</b><br/>Infrastruktur:<br/>Aufbau einer gemeinsamen Forschungsdateninfrastruktur: Dafür werden technische Lösungen zur Erfassung und Beschreibung von Forschungsobjekten entwickelt. Diese Objekte werden in langfristig betreute Archivierungssysteme überführt, und es werden neue Lösungen für die Speicherung von Bilddaten gefunden.</div>", clickable: true},
+            { id: "MethodenTools.html", name: "Methoden & Tools", category: "Säule", year: 2020, color: "#004567", tooltip: "<div style='background-color:#004567'><b>Details:</b><br/>Methoden und Tools:<br/>Abgleich digitaler und traditioneller geisteswissenschaftlicher Methoden: dabei werden Forschungsdaten unter Verwendung von etablierten Standards mit zusätzlichen Daten semantisch ausgezeichnet (Annotation), angereichert und damit für maschinelle Systeme lesbar gemacht. Weiters werden neue Methoden wie die maschinelle Erkennung und Bearbeitung von Bildmaterial (Computer Vision) angewandt. Künstliche Intelligenz unterstützt hierbei zunehmend entsprechende Arbeitsprozesse.</div>", clickable: true},
+            { id: "Wissenstransfer.html", name: "Wissenstransfer", category: "Säule", year: 2020, color: "#004567", tooltip: "<div style='background-color:#004567'><b>Details:</b><br/>Wissenstransfer:<br/>Neue Methoden und Ansätze werden leicht verständlich aufbereitet: Es werden Tutorials geschrieben, die Methoden und Werkzeuge für Benutzer ohne Vorkenntnisse erklären. Außerdem werden Lösungen entwickelt, wie Forschungsdaten präsentiert und Daten aus verschiedenen Datenbanken abgerufen (Information Retrieval) werden können . Dabei werden innovative Methoden zur Wissensvermittlung genutzt, wie z.B. die Visualisierung von Daten.</div>", clickable: true},
             
             /*organisation nodes*/
             { id: "partner.html#oaw", name: "ÖAW", category: "Organisationen", year: 2020, color: "#660000", tooltip: "<div style='background-color:#660000'><b>Details:</b><br/>Österreichische Akademie der Wissenschaften (ÖAW)</div>", clickable: true},
@@ -47,48 +47,48 @@
 
         /* Defining Links between nodes */
         const links = [
-            { source: "Infra", target: "Methoden" },
-            { source: "Infra", target: "Wissenstransfer" },
+            { source: "Infrastruktur.html", target: "MethodenTools.html" },
+            { source: "Infrastruktur.html", target: "Wissenstransfer.html" },
             
-            { source: "Infra", target: "habsburg.html" },
-            { source: "Infra", target: "https://phaidra.univie.ac.at" },
-            { source: "Infra", target: "onbkulturerbe.html" },
-            { source: "Infra", target: "rnab.html" },
-            { source: "Infra", target: "fotodatenbank.html" },
-            { source: "Infra", target: "holzmeister.html" },
-            { source: "Infra", target: "ficker.html" },
-            { source: "Infra", target: "digi16.html" },
-            { source: "Infra", target: "repository.html" },
-            { source: "Infra", target: "pipelines.html" },
+            { source: "Infrastruktur.html", target: "habsburg.html" },
+            { source: "Infrastruktur.html", target: "https://phaidra.univie.ac.at" },
+            { source: "Infrastruktur.html", target: "onbkulturerbe.html" },
+            { source: "Infrastruktur.html", target: "rnab.html" },
+            { source: "Infrastruktur.html", target: "fotodatenbank.html" },
+            { source: "Infrastruktur.html", target: "holzmeister.html" },
+            { source: "Infrastruktur.html", target: "ficker.html" },
+            { source: "Infrastruktur.html", target: "digi16.html" },
+            { source: "Infrastruktur.html", target: "repository.html" },
+            { source: "Infrastruktur.html", target: "pipelines.html" },
             
-            { source: "Methoden", target: "Wissenstransfer" },
+            { source: "MethodenTools.html", target: "Wissenstransfer.html" },
             
-            { source: "Methoden", target: "ficker.html" },
-            { source: "Methoden", target: "holzmeister.html" },
-            { source: "Methoden", target: "gipse.html" },
-            { source: "Methoden", target: "hps.html" },
-            { source: "Methoden", target: "m3r.html" },
-            { source: "Methoden", target: "fercan.html" },
-            { source: "Methoden", target: "derla.html" },
-            { source: "Methoden", target: "onbkulturerbe.html" },
-            { source: "Methoden", target: "rnab.html" },
-            { source: "Methoden", target: "fotodatenbank.html" },
-            { source: "Methoden", target: "digi16.html" },
-            { source: "Methoden", target: "eosc.html" },
+            { source: "MethodenTools.html", target: "ficker.html" },
+            { source: "MethodenTools.html", target: "holzmeister.html" },
+            { source: "MethodenTools.html", target: "gipse.html" },
+            { source: "MethodenTools.html", target: "hps.html" },
+            { source: "MethodenTools.html", target: "m3r.html" },
+            { source: "MethodenTools.html", target: "fercan.html" },
+            { source: "MethodenTools.html", target: "derla.html" },
+            { source: "MethodenTools.html", target: "onbkulturerbe.html" },
+            { source: "MethodenTools.html", target: "rnab.html" },
+            { source: "MethodenTools.html", target: "fotodatenbank.html" },
+            { source: "MethodenTools.html", target: "digi16.html" },
+            { source: "MethodenTools.html", target: "eosc.html" },
             
-            { source: "Wissenstransfer", target: "derla.html" },
-            { source: "Wissenstransfer", target: "dhplus.html" },
-            { source: "Wissenstransfer", target: "dhlehre.html" },
-            { source: "Wissenstransfer", target: "dhlehregraz.html" },
-            { source: "Wissenstransfer", target: "habsburg.html" },
-            { source: "Wissenstransfer", target: "onbkulturerbe.html" },
-            { source: "Wissenstransfer", target: "training.html" },
-            { source: "Wissenstransfer", target: "digi16.html" },
-            { source: "Wissenstransfer", target: "ficker.html" },
+            { source: "Wissenstransfer.html", target: "derla.html" },
+            { source: "Wissenstransfer.html", target: "dhplus.html" },
+            { source: "Wissenstransfer.html", target: "dhlehre.html" },
+            { source: "Wissenstransfer.html", target: "dhlehregraz.html" },
+            { source: "Wissenstransfer.html", target: "habsburg.html" },
+            { source: "Wissenstransfer.html", target: "onbkulturerbe.html" },
+            { source: "Wissenstransfer.html", target: "training.html" },
+            { source: "Wissenstransfer.html", target: "digi16.html" },
+            { source: "Wissenstransfer.html", target: "ficker.html" },
              
-            { source: "Infra", target: "https://gams.uni-graz.at" },
-            { source: "Infra", target: "https://arche.acdh.oeaw.ac.at" },
-            { source: "Infra", target: "https://phaidra.univie.ac.at" },
+            { source: "Infrastruktur.html", target: "https://gams.uni-graz.at" },
+            { source: "Infrastruktur.html", target: "https://arche.acdh.oeaw.ac.at" },
+            { source: "Infrastruktur.html", target: "https://phaidra.univie.ac.at" },
             { source: "https://gams.uni-graz.at", target: "partner.html#ug" },
             { source: "https://arche.acdh.oeaw.ac.at", target: "partner.html#oaw" },
             
@@ -255,7 +255,7 @@ function dragged(event, d) {
 function dragended(event, d) {
     if (!event.active) simulation.alphaTarget(0);
     // Do not nullify fx and fy for fixed nodes
-    if (d.id !== "Infra" && d.id !== "Methoden" && d.id !== "Wissenstransfer") {
+    if (d.id !== "Infrastruktur.html" && d.id !== "MethodenTools.html" && d.id !== "Wissenstransfer.html") {
         d.fx = null;
         d.fy = null;
     }
@@ -333,7 +333,7 @@ function updateGraph() {
     
     // Ensure fixed nodes stay fixed
     filteredNodes.forEach(node => {
-        if (node.id === "Infra" || node.id === "Methoden" || node.id === "Wissenstransfer") {
+        if (node.id === "Infrastruktur.html" || node.id === "MethodenTools.html" || node.id === "Wissenstransfer.html") {
             node.fx = node.x;
             node.fy = node.y;
         }
