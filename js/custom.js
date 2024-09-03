@@ -30,7 +30,7 @@ function scrolldown (src) {
 			window.setTimeout(function () {
 				window.location.href = src;
 				// 2. zahl ist wie weit gescollt wird; minus nach unten; plus nach oben;
-				window.scrollBy(0, -75);
+				window.scrollBy(0, -125);
 			},
 			100);
 		};
