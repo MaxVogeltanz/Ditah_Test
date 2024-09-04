@@ -4,6 +4,40 @@ AOS.init({
 	once: true
 });
 
+/*document.querySelectorAll('a[href^="partner.html#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 150; // Adjust the offset as needed
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
+    });
+});*/
+
+
+ /*scrolldown code von vera*/ 
+function scrolldown (src) {
+		if (src !== '') {
+			if (typeof src !== typeof '') {
+				src = $(src).attr('href');
+			}
+			//src ist onclick(this) also #repertoire etc.;
+			window.setTimeout(function () {
+				window.location.href = src;
+				// 2. zahl ist wie weit gescollt wird; minus nach unten; plus nach oben;
+				window.scrollBy(0, -160);
+			},
+			100);
+		};
+	}; 
+
 $(function(){
 
 	'use strict';
