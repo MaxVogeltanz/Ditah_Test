@@ -4,59 +4,7 @@ AOS.init({
 	once: true
 });
 
-/*document.querySelectorAll('a[href^="partner.html#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
 
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-            const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 150; // Adjust the offset as needed
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            });
-        }
-    });
-});*/
-
-function scrolldown(src) {
-  if (src !== '') {
-    if (typeof src !== typeof '') {
-      src = $(src).attr('href'); // Extract the href attribute value
-    }
-    // src is the href value, e.g., #ui
-    window.setTimeout(function() {
-      var targetId = src.substring(1); // Extract the target ID by removing the '#'
-      var targetElement = document.getElementById(targetId); // Find the target element by ID
-      if (targetElement) {
-        var headerHeight = 160; // Replace 60 with the actual height of your fixed header
-        var headerOffset = targetElement.offsetTop - headerHeight;
-        window.scrollTo({
-          top: headerOffset,
-          behavior: "smooth"
-        });
-      }
-    }, 100);
-  }
-}
-
- /*scrolldown code von vera*/ 
-/*function scrolldown (src) {
-		if (src !== '') {
-			if (typeof src !== typeof '') {
-				src = $(src).attr('href');
-			}
-			//src ist onclick(this) also #repertoire etc.;
-			window.setTimeout(function () {
-				window.location.href = src;
-				// 2. zahl ist wie weit gescollt wird; minus nach unten; plus nach oben;
-				window.scrollBy(0, -160);
-			},
-			100);
-		};
-	}; */
 
 $(function(){
 
