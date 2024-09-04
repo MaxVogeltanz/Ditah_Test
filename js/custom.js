@@ -21,9 +21,26 @@ AOS.init({
     });
 });*/
 
+function scrolldown(src) {
+  if (src !== '') {
+    if (typeof src !== typeof '') {
+      src = $(src).attr('href'); // Extract the href attribute value
+    }
+    // src is the href value, e.g., #ui
+    window.setTimeout(function() {
+      var targetId = src.substring(1); // Extract the target ID by removing the '#'
+      var targetElement = document.getElementById(targetId); // Find the target element by ID
+      if (targetElement) {
+        targetElement.scrollIntoView(); // Scroll to the target element
+      }
+      window.scrollBy(0, -160); // Scroll up by 160 pixels
+    }, 100);
+  }
+}
+
 
  /*scrolldown code von vera*/ 
-function scrolldown (src) {
+/*function scrolldown (src) {
 		if (src !== '') {
 			if (typeof src !== typeof '') {
 				src = $(src).attr('href');
@@ -36,7 +53,7 @@ function scrolldown (src) {
 			},
 			100);
 		};
-	}; 
+	}; */
 
 $(function(){
 
