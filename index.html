@@ -110,9 +110,9 @@
       <div class="row align-items-center">
         <div class="col-12 col-sm-12 col-lg-12 site-navigation text-center">
           <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li class="active"><a href="index.html" class="indexnavitem">Home</a></li>
             <li class="has-children">
-              <a href="#">Partner</a>
+              <a href="#" class="indexnavitem">Partner</a>
               <ul class="dropdown">
                 <li><a href="partner.html#ug" onclick="scrolldown(this)">Universität Graz (Lead)</a></li>
                 <li><a href="partner.html#oaw" onclick="scrolldown(this)">Österreichische Akademie der Wissenschaften</a></li>
@@ -134,7 +134,7 @@
             </li>
             
             <li class="has-children">
-              <a href="#">Projekte</a>
+              <a href="#" class="indexnavitem">Projekte</a>
               <ul class="dropdown">
                 <li class="has-children">
                   <a href="#">Projekte A - F</a>
@@ -168,7 +168,7 @@
                 </li>
               </ul>
             </li>
-            <li class="active"><a href="index.html#about" onclick="scrolldown(this)">About</a></li>
+            <li class="active"><a href="index.html#about" onclick="scrolldown(this)" class="indexnavitem">About</a></li>
           </ul>
           <a href="#" class="burger light ml-auto site-menu-toggle js-menu-toggle d-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
             <span></span>
@@ -794,9 +794,22 @@
       // Change the background color of the element when the threshold is crossed
       if (scrollPosition > threshold) {
           navColor.style.backgroundColor = '#ffffff'; // Change to any color you like
+           
       } else {
           navColor.style.backgroundColor = '#003652'; // Original color
+          
       }
+      const textElements = navColor.querySelectorAll('a.indexnavitem');
+
+textElements.forEach(function(element) {
+  if (scrollPosition > threshold) {
+    element.style.color = '#003652'; // Change text color back to the original for each element
+  } else {
+    element.style.color = '#ffffff'; // Change text color to white for each element
+  }
+});
+
+
   });
 </script>
 
