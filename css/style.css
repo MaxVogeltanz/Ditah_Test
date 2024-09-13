@@ -2101,7 +2101,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 
 /* sidenav */
-  @media screen and (min-width: 650px) { 
+  @media screen and (min-width: 1001px) { 
 
 
 .iconBar {
@@ -2185,7 +2185,7 @@ margin-left: 3.5em;
   color: #ffffff;
 }
 }
-@media screen and (max-width: 649px) { 
+@media screen and (max-width: 1000px) { 
 
 .iconBar {
     padding-top:5em;
